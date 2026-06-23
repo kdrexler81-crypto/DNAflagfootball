@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DNA Football | Elite Girls' Flag Football in Northern NJ</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Oswald:wght@500;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        dna: {
+                            navy: '#0b132b',
+                            blue: '#1c7ed6',
+                            magenta: '#d6336c',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Oswald', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .btn-gradient {
+            background: linear-gradient(135deg, #1c7ed6 0%, #d6336c 100%);
+            transition: all 0.3s ease;
+        }
+        
+        .btn-gradient:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px -10px rgba(214, 51, 108, 0.8);
+        }
+
+        .text-gradient {
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-image: linear-gradient(to right, #1c7ed6, #d6336c);
+        }
+    </style>
+</head>
+<body class="bg-slate-950 text-slate-200 antialiased selection:bg-dna-magenta selection:text-white">
+
+    <!-- Background Gradients -->
+    <div class="fixed inset-0 z-[-1] overflow-hidden pointer-events-none">
+        <div class="absolute top-[-10%] left-[-10%] w-[50%] h-[50%] rounded-full bg-dna-blue/10 blur-[120px]"></div>
+        <div class="absolute bottom-[-10%] right-[-10%] w-[50%] h-[50%] rounded-full bg-dna-magenta/10 blur-[120px]"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-slate-950/80 backdrop-blur-md border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0 flex items-center gap-3">
+                    <!-- Nav Logo -->
+                    <img src="DNA Logo.png" alt="DNA Football Logo" class="h-10 w-auto bg-white rounded-full p-1" onerror="this.style.display='none'">
+                    <span class="font-display font-bold text-xl tracking-wide uppercase text-white">DNA Football</span>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#about" class="text-sm font-semibold text-slate-300 hover:text-dna-magenta transition">Our Mission</a>
+                    <a href="#coaching" class="text-sm font-semibold text-slate-300 hover:text-dna-blue transition">Club Standards</a>
+                    <a href="#join" class="text-sm font-semibold hover:text-white text-dna-magenta transition">Join the Roster</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="relative pt-32 pb-20 sm:pt-40 sm:pb-24 min-h-screen flex items-center">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative text-center w-full">
+            
+            <!-- Main Logo Display -->
+            <div class="flex justify-center mb-8">
+                <div class="bg-white p-3 rounded-3xl shadow-2xl inline-block transform -rotate-1 hover:rotate-0 transition duration-300">
+                    <img src="DNA Logo.png" alt="DNA Football Logo" class="w-full max-w-[250px] sm:max-w-[320px] h-auto rounded-2xl" onerror="this.style.display='none'; document.getElementById('fallback-text').classList.remove('hidden');">
+                    <div id="fallback-text" class="hidden bg-dna-navy p-8 rounded-xl text-3xl font-display text-white">DNA FOOTBALL</div>
+                </div>
+            </div>
+
+            <!-- Title Banner -->
+            <h1 class="text-6xl sm:text-7xl lg:text-8xl font-display font-bold uppercase tracking-tight mb-2 text-white drop-shadow-lg">
+                DNA <span class="text-dna-blue">Football</span>
+            </h1>
+            
+            <!-- Sub-title -->
+            <h2 class="text-2xl sm:text-3xl lg:text-4xl font-display font-semibold uppercase tracking-widest text-slate-300 mb-6">
+                Travel Girls Flag Football Club
+            </h2>
+
+            <!-- Tagline -->
+            <p class="text-3xl sm:text-4xl font-display italic font-bold mb-8 text-white">
+                "It's In <span class="text-gradient">Your Blood.</span>"
+            </p>
+
+            <p class="mt-4 text-lg sm:text-xl text-slate-400 max-w-3xl mx-auto font-light leading-relaxed mb-10">
+                The premier elite girls' flag football club serving Northern New Jersey. We are building a professional, high-level development pipeline for the fastest-growing sport in the world.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#join" class="btn-gradient text-white font-bold px-8 py-4 rounded-full uppercase tracking-widest text-sm shadow-lg text-center">
+                    Get on the Waitlist
+                </a>
+                <a href="#about" class="bg-white/5 border border-white/10 text-white font-bold px-8 py-4 rounded-full uppercase tracking-widest text-sm hover:bg-white/10 transition text-center">
+                    Discover Our Club
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- About Us / Our Mission Section -->
+    <section id="about" class="py-24 bg-slate-900 border-y border-white/5">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-16 items-center">
+                <div>
+                    <h2 class="text-3xl sm:text-4xl font-display font-bold uppercase mb-6 text-dna-blue">The Standard of Excellence</h2>
+                    <div class="space-y-6 text-slate-300 leading-relaxed text-lg">
+                        <p>
+                            <strong class="text-white">DNA Football</strong> is the premier elite girls' flag football organization in Northern New Jersey. We are dedicated to setting the standard of excellence in the fastest-growing sport in the world, providing a professional, comprehensive development pathway that empowers student-athletes to reach their highest potential.
+                        </p>
+                        <p>
+                            Operating with the structure and rigor of the nation's top youth sports clubs, we provide a year-round environment designed for athletes committed to mastering their craft. 
+                        </p>
+                        <p>
+                            From foundational mechanics to high-level schematic execution on the travel circuit, DNA Football prepares players for the next level—whether that is dominating high school leagues, competing for state titles, or preparing for the collegiate stage.
+                        </p>
+                    </div>
+                </div>
+                <div class="bg-slate-800/50 border border-white/10 p-8 rounded-3xl relative overflow-hidden shadow-xl">
+                    <h3 class="text-2xl font-display font-bold uppercase mb-4 text-white">The 12-Month Pipeline</h3>
+                    <p class="text-slate-400 text-sm mb-6">Our organization utilizes a year-round developmental curriculum ensuring continuous athlete progression.</p>
+                    <ul class="space-y-5 text-slate-300">
+                        <li class="flex items-start">
+                            <svg class="w-6 h-6 text-dna-blue mr-3 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            <div>
+                                <strong class="text-white block">Fall: Foundational Play</strong>
+                                <span class="text-sm text-slate-400">Local leagues focused on game IQ and situational awareness.</span>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-6 h-6 text-dna-blue mr-3 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            <div>
+                                <strong class="text-white block">Winter: Technical Academies</strong>
+                                <span class="text-sm text-slate-400">Specialized indoor clinics focused on advanced mechanical repetition.</span>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-6 h-6 text-dna-blue mr-3 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            <div>
+                                <strong class="text-white block">Spring: Regional Showcases</strong>
+                                <span class="text-sm text-slate-400">Pre-season tournament prep and local competitive circuits.</span>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-6 h-6 text-dna-magenta mr-3 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            <div>
+                                <strong class="text-white block">Summer: Elite Travel Circuit</strong>
+                                <span class="text-sm text-slate-400">High-exposure national tournaments and championship events.</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Club Standards & Coaching (Features) -->
+    <section id="coaching" class="py-24 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl sm:text-5xl font-display font-bold uppercase mb-4 text-white">Our <span class="text-dna-magenta">Club Pillars</span></h2>
+                <p class="text-slate-400 text-lg">What separates an elite club from recreational play is the quality of instruction, the level of competition, and an uncompromising commitment to athlete safety.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Feature 1: Coaching -->
+                <div class="bg-slate-900/80 border border-white/5 p-8 rounded-2xl hover:-translate-y-2 transition duration-300 shadow-lg relative overflow-hidden">
+                    <div class="absolute top-0 right-0 w-2 h-full bg-dna-magenta"></div>
+                    <div class="w-14 h-14 rounded-full bg-dna-magenta/20 flex items-center justify-center mb-6 border border-dna-magenta/30">
+                        <svg class="w-7 h-7 text-dna-magenta" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Championship Pedigree</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        Our staff doesn't just run drills; they build champions. DNA Football is anchored by professionals boasting <strong class="text-white">decades of championship experience</strong> at both the high school and club levels, bringing collegiate-level curriculums to the youth game.
+                    </p>
+                </div>
+
+                <!-- Feature 2: Certification & Safety -->
+                <div class="bg-slate-900/80 border border-white/5 p-8 rounded-2xl hover:-translate-y-2 transition duration-300 shadow-lg relative overflow-hidden">
+                    <div class="absolute top-0 right-0 w-2 h-full bg-emerald-500"></div>
+                    <div class="w-14 h-14 rounded-full bg-emerald-500/20 flex items-center justify-center mb-6 border border-emerald-500/30">
+                        <svg class="w-7 h-7 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Certified & Vetted</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        We prioritize the safety and technical integrity of our athletes above all else. Every coach within our organization is fully background-checked, SafeSport compliant, and holds official <strong class="text-white">USA Football Certification</strong>.
+                    </p>
+                </div>
+
+                <!-- Feature 3: National Affiliations -->
+                <div class="bg-slate-900/80 border border-white/5 p-8 rounded-2xl hover:-translate-y-2 transition duration-300 shadow-lg relative overflow-hidden">
+                    <div class="absolute top-0 right-0 w-2 h-full bg-dna-blue"></div>
+                    <div class="w-14 h-14 rounded-full bg-dna-blue/20 flex items-center justify-center mb-6 border border-dna-blue/30">
+                        <svg class="w-7 h-7 text-dna-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">National Affiliations</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        To provide our athletes with premium exposure, we are dual-sanctioned by <strong class="text-white">USA Football</strong> (the official Olympic scouting pipeline) and <strong class="text-white">NFL FLAG</strong>, securing access to exclusive national championship circuits.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action / Form Section -->
+    <section id="join" class="py-24 relative bg-slate-900 border-t border-white/5">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="bg-slate-950 rounded-3xl p-8 sm:p-16 border border-white/10 shadow-2xl">
+                
+                <div class="grid lg:grid-cols-2 gap-16 items-center">
+                    <!-- Text Info -->
+                    <div>
+                        <h2 class="text-3xl sm:text-5xl font-display font-bold uppercase mb-6 text-white">Join the <span class="text-dna-blue">Roster</span></h2>
+                        
+                        <div class="space-y-8 mt-8">
+                            <div>
+                                <h3 class="text-xl font-bold text-white mb-2 flex items-center gap-2">
+                                    <span class="w-6 h-6 rounded-full bg-dna-magenta text-white flex items-center justify-center text-xs">1</span>
+                                    The Elite Pipeline
+                                </h3>
+                                <p class="text-slate-400 text-sm leading-relaxed pl-8">
+                                    You recognize your daughter's athletic potential and know that standard local leagues are no longer pushing her development. This is the premier pipeline for the next generation of talent—designed to elevate her game in a highly structured, competitive environment.
+                                </p>
+                            </div>
+                            
+                            <div>
+                                <h3 class="text-xl font-bold text-white mb-2 flex items-center gap-2">
+                                    <span class="w-6 h-6 rounded-full bg-dna-blue text-white flex items-center justify-center text-xs">2</span>
+                                    The Player Pathway
+                                </h3>
+                                <p class="text-slate-400 text-sm leading-relaxed pl-8">
+                                    We evaluate and capture athletes of all skill levels year-round. Whether you are seeking high-volume fundamentals in our academies or you are a seasoned athlete ready to compete on the high-commitment travel circuit, DNA Football has a place for you.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Form -->
+                    <div class="bg-slate-900 p-8 rounded-2xl border border-white/5 shadow-inner">
+                        <h3 class="text-2xl font-bold text-white mb-2">Sign Up for Club Updates</h3>
+                        <p class="text-slate-400 text-sm mb-8">Details on ID camps, tryouts, and registration dropping soon.</p>
+
+                        <form id="waitlist-form" name="submit-to-google-sheet" class="flex flex-col gap-4">
+                            <div class="grid grid-cols-2 gap-4">
+                                <div>
+                                    <label for="firstName" class="sr-only">First Name</label>
+                                    <input type="text" id="firstName" name="First Name" placeholder="Parent/Player First Name" required class="w-full px-4 py-3 rounded-xl bg-slate-950 border border-white/10 text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-dna-blue transition">
+                                </div>
+                                <div>
+                                    <label for="lastName" class="sr-only">Last Name</label>
+                                    <input type="text" id="lastName" name="Last Name" placeholder="Last Name" required class="w-full px-4 py-3 rounded-xl bg-slate-950 border border-white/10 text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-dna-blue transition">
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <label for="email" class="sr-only">Email Address</label>
+                                <input type="email" id="email" name="Email" placeholder="Best Email Address" required class="w-full px-4 py-3 rounded-xl bg-slate-950 border border-white/10 text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-dna-magenta transition">
+                            </div>
+
+                            <button type="submit" id="submit-btn" class="btn-gradient text-white font-bold px-6 py-4 rounded-xl uppercase tracking-widest w-full mt-4 text-sm shadow-lg">
+                                Secure My Spot
+                            </button>
+                        </form>
+
+                        <!-- Success Message -->
+                        <div id="success-message" class="hidden mt-6 text-emerald-400 text-center font-medium bg-emerald-400/10 py-4 px-4 rounded-xl border border-emerald-400/20">
+                            <svg class="w-6 h-6 mx-auto mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                            Information Received. We will be in touch.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-10 bg-slate-950 border-t border-white/10 text-center">
+        <div class="flex justify-center gap-6 mb-6">
+            <a href="https://instagram.com/DNA_Football_Flag" target="_blank" class="text-slate-400 hover:text-dna-magenta transition flex items-center gap-2">
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z" clip-rule="evenodd"/></svg>
+                <span class="text-sm font-semibold tracking-wide">@DNA_Football_Flag</span>
+            </a>
+        </div>
+        <p class="text-slate-600 text-xs uppercase tracking-widest">&copy; <span id="year"></span> DNA Football. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // --- GOOGLE SHEETS INTEGRATION ---
+        const scriptURL = 'YOUR_GOOGLE_WEB_APP_URL_HERE';
+        const form = document.forms['submit-to-google-sheet'];
+        const submitBtn = document.getElementById('submit-btn');
+        const successMsg = document.getElementById('success-message');
+
+        form.addEventListener('submit', e => {
+            e.preventDefault();
+            
+            submitBtn.textContent = 'Processing...';
+            submitBtn.classList.add('opacity-50', 'cursor-not-allowed');
+            submitBtn.disabled = true;
+
+            fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                .then(response => {
+                    form.classList.add('hidden');
+                    successMsg.classList.remove('hidden');
+                })
+                .catch(error => {
+                    console.error('Error!', error.message);
+                    submitBtn.textContent = 'Error. Try Again.';
+                    submitBtn.classList.remove('opacity-50', 'cursor-not-allowed');
+                    submitBtn.disabled = false;
+                });
+        });
+    </script>
+</body>
+</html>
