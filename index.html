@@ -46,7 +46,7 @@
 </head>
 <body class="bg-slate-950 text-slate-200 antialiased selection:bg-dna-magenta selection:text-white">
 
-    <!-- Background Gradients -->
+    <!-- Background Gradients (Kept for sections below the hero) -->
     <div class="fixed inset-0 z-[-1] overflow-hidden pointer-events-none">
         <div class="absolute top-[-10%] left-[-10%] w-[50%] h-[50%] rounded-full bg-dna-blue/10 blur-[120px]"></div>
         <div class="absolute bottom-[-10%] right-[-10%] w-[50%] h-[50%] rounded-full bg-dna-magenta/10 blur-[120px]"></div>
@@ -70,42 +70,43 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <div class="relative pt-32 pb-20 sm:pt-40 sm:pb-24 min-h-screen flex items-center">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative text-center w-full">
+    <!-- Hero Section with Custom Background Image -->
+    <div class="relative pt-32 pb-20 sm:pt-40 sm:pb-24 min-h-screen flex items-center bg-slate-950">
+        
+        <!-- Background Image Container -->
+        <div class="absolute inset-0 z-0">
+            <img src="Gemini_Generated_Image_we9ub5we9ub5we9u.png" alt="DNA Football Action" class="w-full h-full object-cover opacity-30 mix-blend-luminosity">
+            <!-- The Dark Overlay for Text Readability -->
+            <div class="absolute inset-0 bg-gradient-to-b from-slate-950/80 via-slate-950/60 to-slate-950"></div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center w-full">
             
-            <!-- Main Logo Display (Directly on background, larger size) -->
-            <div class="flex justify-center mb-6">
-                <img src="DNA Logo.png" alt="DNA Football Logo" class="w-full max-w-[350px] sm:max-w-[450px] h-auto" onerror="this.style.display='none'; document.getElementById('fallback-text').classList.remove('hidden');">
-                <div id="fallback-text" class="hidden text-5xl font-display font-bold text-white mb-4">DNA FOOTBALL</div>
+            <!-- Main Logo Display (No white box, larger size) -->
+            <div class="flex justify-center mb-8">
+                <img src="DNA Logo.png" alt="DNA Athletics Logo" class="w-full max-w-[350px] sm:max-w-[450px] h-auto drop-shadow-2xl" onerror="this.style.display='none'; document.getElementById('fallback-text').classList.remove('hidden');">
+                <div id="fallback-text" class="hidden bg-dna-navy/80 backdrop-blur-sm p-8 rounded-xl text-4xl font-display text-white border border-white/10">DNA FOOTBALL</div>
             </div>
 
-            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-display font-bold uppercase tracking-tight mb-4 text-white">
-                DNA Football
+            <h1 class="text-5xl sm:text-6xl lg:text-7xl font-display font-bold uppercase tracking-tight mb-6 text-white drop-shadow-lg">
+                It's In <span class="text-gradient drop-shadow-sm">Your Blood.</span>
             </h1>
-            <h2 class="text-2xl sm:text-3xl font-display uppercase tracking-wide text-dna-blue mb-6">
-                Travel Girls Flag Football Club
-            </h2>
-            <h3 class="text-3xl sm:text-4xl font-display font-bold uppercase tracking-tight mb-8">
-                <span class="text-gradient">It's In Your Blood.</span>
-            </h3>
-            
-            <p class="mt-4 text-lg sm:text-xl text-slate-300 max-w-3xl mx-auto font-light leading-relaxed mb-10">
+            <p class="mt-4 text-lg sm:text-2xl text-slate-200 max-w-3xl mx-auto font-medium leading-relaxed mb-10 drop-shadow-md">
                 The premier elite girls' flag football club serving Northern New Jersey. We are building a professional, high-level development pipeline for the fastest-growing sport in the world.
             </p>
             <div class="flex flex-col sm:flex-row justify-center gap-4">
-                <a href="#join" class="btn-gradient text-white font-bold px-8 py-4 rounded-full uppercase tracking-widest text-sm shadow-lg text-center">
+                <a href="#join" class="btn-gradient text-white font-bold px-8 py-4 rounded-full uppercase tracking-widest text-sm shadow-[0_0_20px_rgba(214,51,108,0.4)] text-center">
                     Get on the Waitlist
                 </a>
-                <a href="#about" class="bg-white/5 border border-white/10 text-white font-bold px-8 py-4 rounded-full uppercase tracking-widest text-sm hover:bg-white/10 transition text-center">
-                    Discover Our Club
+                <a href="#about" class="bg-white/10 backdrop-blur-md border border-white/20 text-white font-bold px-8 py-4 rounded-full uppercase tracking-widest text-sm hover:bg-white/20 transition text-center shadow-lg">
+                    Learn More
                 </a>
             </div>
         </div>
     </div>
 
-    <!-- About Us / Our Mission Section -->
-    <section id="about" class="py-24 bg-slate-900 border-y border-white/5">
+    <!-- The Movement Section -->
+    <section id="about" class="py-24 bg-slate-900 border-y border-white/5 relative z-10">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid md:grid-cols-2 gap-16 items-center">
                 <div>
