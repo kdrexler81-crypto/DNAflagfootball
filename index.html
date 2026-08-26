@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DNA Football | Travel Girls Flag Football Club</title>
+    <title>DNA Football | Elite Girls' Flag Football in Northern NJ</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Oswald:wght@500;700&display=swap" rel="stylesheet">
     <script>
@@ -42,14 +42,42 @@
             -webkit-text-fill-color: transparent;
             background-image: linear-gradient(to right, #1c7ed6, #d6336c);
         }
+        
+        /* Modal Animation */
+        .modal-fade-in {
+            animation: modalFadeIn 0.4s ease-out forwards;
+        }
+        @keyframes modalFadeIn {
+            from { opacity: 0; transform: scale(0.95) translateY(20px); }
+            to { opacity: 1; transform: scale(1) translateY(0); }
+        }
     </style>
 </head>
 <body class="bg-slate-950 text-slate-200 antialiased selection:bg-dna-magenta selection:text-white">
 
-    <!-- Background Gradients (Kept for sections below the hero) -->
-    <div class="fixed inset-0 z-[-1] overflow-hidden pointer-events-none">
-        <div class="absolute top-[-10%] left-[-10%] w-[50%] h-[50%] rounded-full bg-dna-blue/10 blur-[120px]"></div>
-        <div class="absolute bottom-[-10%] right-[-10%] w-[50%] h-[50%] rounded-full bg-dna-magenta/10 blur-[120px]"></div>
+    <!-- PROMO POPUP MODAL -->
+    <div id="promo-modal" class="fixed inset-0 z-[100] flex items-center justify-center bg-black/80 backdrop-blur-sm hidden opacity-0 transition-opacity duration-300">
+        <div class="relative max-w-lg w-full bg-slate-900 rounded-3xl shadow-2xl border border-white/20 p-2 mx-4 transform scale-95 transition-transform duration-300" id="modal-content">
+            <!-- Close Button -->
+            <button id="close-modal" class="absolute top-4 right-4 z-10 w-8 h-8 flex items-center justify-center bg-black/50 hover:bg-dna-magenta text-white rounded-full transition-colors">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+            </button>
+            
+            <!-- Flier Image Placeholder -->
+            <div class="relative rounded-2xl overflow-hidden bg-slate-800">
+                <!-- IMPORTANT: Ensure your actual flier image is named 'flier.jpg' and uploaded to github -->
+                <img src="flier.jpg" alt="DNA Football Combine Clinic" class="w-full h-auto object-cover" onerror="this.onerror=null; this.src='https://placehold.co/600x600/1c7ed6/ffffff?text=Combine+Clinic+Flier';">
+            </div>
+
+            <!-- Modal Action Area -->
+            <div class="p-6 text-center">
+                <h3 class="text-2xl font-display font-bold text-white mb-2 uppercase">Inaugural Combine & Clinic</h3>
+                <p class="text-slate-400 text-sm mb-6">Spots are extremely limited. Secure your place on the roster today.</p>
+                <a href="#join" id="modal-cta" class="inline-block w-full btn-gradient text-white font-bold px-6 py-4 rounded-xl uppercase tracking-widest text-sm shadow-lg">
+                    Secure Your Spot
+                </a>
+            </div>
+        </div>
     </div>
 
     <!-- Navigation -->
@@ -57,7 +85,7 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-20">
                 <div class="flex-shrink-0 flex items-center gap-3">
-                    <!-- Nav Logo -->
+                    <!-- Nav Logo (Transparent) -->
                     <img src="DNA Logo.png" alt="DNA Football Logo" class="h-12 w-auto" onerror="this.style.display='none'">
                     <span class="font-display font-bold text-xl tracking-wide uppercase text-white">DNA Football</span>
                 </div>
@@ -70,43 +98,50 @@
         </div>
     </nav>
 
-    <!-- Hero Section with Custom Background Image -->
-    <div class="relative pt-32 pb-20 sm:pt-40 sm:pb-24 min-h-screen flex items-center bg-slate-950">
+    <!-- Hero Section with Background Image -->
+    <div class="relative pt-32 pb-20 sm:pt-40 sm:pb-32 min-h-screen flex items-center justify-center overflow-hidden">
         
         <!-- Background Image Container -->
         <div class="absolute inset-0 z-0">
-            <!-- Increased opacity to 50% -->
-            <img src="Gemini_Generated_Image_we9ub5we9ub5we9u.png" alt="DNA Football Action" class="w-full h-full object-cover opacity-50 mix-blend-luminosity">
-            <!-- Lightened the dark overlay slightly -->
-            <div class="absolute inset-0 bg-gradient-to-b from-slate-950/70 via-slate-950/50 to-slate-950"></div>
+            <!-- Ensure your generated image is uploaded to github as exactly this name -->
+            <img src="Gemini_Generated_Image_we9ub5we9ub5we9u.png" alt="Action background" class="w-full h-full object-cover opacity-60">
+            <!-- Dark gradient overlay to make text readable -->
+            <div class="absolute inset-0 bg-gradient-to-b from-slate-950/50 via-slate-950/70 to-slate-950"></div>
         </div>
 
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center w-full">
             
-            <!-- Main Logo Display (No white box, larger size) -->
+            <!-- Main Logo Display (Transparent & Larger) -->
             <div class="flex justify-center mb-8">
-                <img src="DNA Logo.png" alt="DNA Athletics Logo" class="w-full max-w-[350px] sm:max-w-[450px] h-auto drop-shadow-2xl" onerror="this.style.display='none'; document.getElementById('fallback-text').classList.remove('hidden');">
-                <div id="fallback-text" class="hidden bg-dna-navy/80 backdrop-blur-sm p-8 rounded-xl text-4xl font-display text-white border border-white/10">DNA FOOTBALL</div>
+                <img src="DNA Logo.png" alt="DNA Football Logo" class="w-full max-w-[300px] sm:max-w-[400px] h-auto drop-shadow-2xl hover:scale-105 transition-transform duration-500" onerror="this.style.display='none'; document.getElementById('fallback-text').classList.remove('hidden');">
+                <div id="fallback-text" class="hidden text-5xl font-display text-white">DNA FOOTBALL</div>
             </div>
 
-            <h1 class="text-5xl sm:text-6xl lg:text-7xl font-display font-bold uppercase tracking-tight mb-6 text-white drop-shadow-lg">
-                It's In <span class="text-gradient drop-shadow-sm">Your Blood.</span>
+            <!-- Title Banner & Sub-Title -->
+            <h1 class="text-5xl sm:text-7xl lg:text-8xl font-display font-bold uppercase tracking-tight mb-2 text-white drop-shadow-lg">
+                DNA FOOTBALL
             </h1>
-            <p class="mt-4 text-lg sm:text-2xl text-slate-200 max-w-3xl mx-auto font-medium leading-relaxed mb-10 drop-shadow-md">
-                The premier elite girls' flag football club serving Northern New Jersey. We are building a professional, high-level development pipeline for the fastest-growing sport in the world.
+            <h2 class="text-2xl sm:text-3xl lg:text-4xl font-display font-medium text-dna-blue uppercase tracking-widest mb-6 drop-shadow-md">
+                Travel Girls Flag Football Club
+            </h2>
+            
+            <!-- Tagline -->
+            <p class="mt-4 text-xl sm:text-3xl text-slate-200 max-w-3xl mx-auto font-light leading-relaxed mb-10 italic">
+                "It's In <span class="text-gradient font-bold not-italic">Your Blood.</span>"
             </p>
+            
             <div class="flex flex-col sm:flex-row justify-center gap-4">
-                <a href="#join" class="btn-gradient text-white font-bold px-8 py-4 rounded-full uppercase tracking-widest text-sm shadow-[0_0_20px_rgba(214,51,108,0.4)] text-center">
+                <a href="#join" class="btn-gradient text-white font-bold px-8 py-4 rounded-full uppercase tracking-widest text-sm shadow-xl text-center border border-transparent">
                     Get on the Waitlist
                 </a>
-                <a href="#about" class="bg-white/10 backdrop-blur-md border border-white/20 text-white font-bold px-8 py-4 rounded-full uppercase tracking-widest text-sm hover:bg-white/20 transition text-center shadow-lg">
-                    Learn More
+                <a href="#about" class="bg-slate-950/50 backdrop-blur-md border border-white/20 text-white font-bold px-8 py-4 rounded-full uppercase tracking-widest text-sm hover:bg-white/10 transition text-center">
+                    Discover Our Club
                 </a>
             </div>
         </div>
     </div>
 
-    <!-- The Movement Section -->
+    <!-- About Us / Our Mission Section -->
     <section id="about" class="py-24 bg-slate-900 border-y border-white/5 relative z-10">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid md:grid-cols-2 gap-16 items-center">
@@ -163,7 +198,7 @@
     </section>
 
     <!-- Club Standards & Coaching (Features) -->
-    <section id="coaching" class="py-24 relative">
+    <section id="coaching" class="py-24 relative bg-slate-950">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto mb-16">
                 <h2 class="text-3xl sm:text-5xl font-display font-bold uppercase mb-4 text-white">Our <span class="text-dna-magenta">Club Pillars</span></h2>
@@ -292,8 +327,57 @@
         <p class="text-slate-600 text-xs uppercase tracking-widest">&copy; <span id="year"></span> DNA Football. All rights reserved.</p>
     </footer>
 
+    <!-- Scripts -->
     <script>
+        // Set dynamic year
         document.getElementById('year').textContent = new Date().getFullYear();
+
+        // --- POPUP MODAL LOGIC ---
+        document.addEventListener('DOMContentLoaded', () => {
+            const modal = document.getElementById('promo-modal');
+            const modalContent = document.getElementById('modal-content');
+            const closeBtn = document.getElementById('close-modal');
+            const ctaBtn = document.getElementById('modal-cta');
+
+            // Check if they've already seen it this session so it doesn't annoy them
+            if (!sessionStorage.getItem('seenCombinePromo')) {
+                // Delay the popup by 1.5 seconds for a smooth entrance
+                setTimeout(() => {
+                    modal.classList.remove('hidden');
+                    // Small delay to allow display block to apply before animating opacity
+                    setTimeout(() => {
+                        modal.classList.remove('opacity-0');
+                        modalContent.classList.remove('scale-95');
+                        modalContent.classList.add('scale-100');
+                    }, 50);
+                }, 1500);
+            }
+
+            // Function to close modal safely
+            const closeModal = () => {
+                modal.classList.add('opacity-0');
+                modalContent.classList.remove('scale-100');
+                modalContent.classList.add('scale-95');
+                
+                setTimeout(() => {
+                    modal.classList.add('hidden');
+                }, 300); // Wait for transition to finish
+                
+                // Mark as seen in this browser session
+                sessionStorage.setItem('seenCombinePromo', 'true');
+            };
+
+            // Close when clicking the X, or the CTA button
+            closeBtn.addEventListener('click', closeModal);
+            ctaBtn.addEventListener('click', closeModal);
+
+            // Close when clicking outside the modal box (on the dark overlay)
+            modal.addEventListener('click', (e) => {
+                if(e.target === modal) {
+                    closeModal();
+                }
+            });
+        });
 
         // --- MAILERLITE INTEGRATION ---
         const form = document.getElementById('waitlist-form');
@@ -303,20 +387,17 @@
         form.addEventListener('submit', async (e) => {
             e.preventDefault();
             
-            // 1. Get the values from the form inputs
             const firstName = document.getElementById('firstName').value;
             const lastName = document.getElementById('lastName').value;
             const email = document.getElementById('email').value;
 
-            // Show loading state
             submitBtn.textContent = 'Processing...';
             submitBtn.classList.add('opacity-50', 'cursor-not-allowed');
             submitBtn.disabled = true;
 
-            // 2. Prepare the data for MailerLite
             // IMPORTANT: Replace the "YOUR_API_KEY" and "YOUR_GROUP_ID" placeholders below!
-            const apiKey = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI0IiwianRpIjoiNzFkZjk5NmJiZGE0MzNlN2IzYzIyZTZjOTU4YTM5ZDJiNzBjYmEzNmYzZjQ2Y2ZkZDQyNDRhYjU3OTI4NDY3MGNlMDE5MjhiODBhMzY3YWYiLCJpYXQiOjE3ODMzNjcwMTkuODA1MDQsIm5iZiI6MTc4MzM2NzAxOS44MDUwNDIsImV4cCI6NDkzOTA0MDYxOS44MDEwNywic3ViIjoiMjUxMTExNSIsInNjb3BlcyI6W119.SrV0lpZ6AFli98Hy2GRMTQruzfSZniR70PAW8b8WHk4fSfznvBjL8g5V9p63SK1VsGLS2_sC-MI9kd27Rzs2d9mm3HWLP4xby8Z8bASaXjVrgGKwe-crD_ni1GMNGENpUVgp0GfvewgQ3aScInc86GxmIR8-lL8ZYSNtmhgnCwX4R_le3xnUntuhQxhlI_KPp1Pjkq6XprPfhT4GmCc_Phfv5Pjiy03Nmg7enOoeSVIJmWkb5Gs056B04eTtmeFoVOkKC0tFCZE0O-L-o3luUf2w6fz2pACtMHeFPpRk-FUjd761cHg3SljzRS_I9j-w42_KOaZxtVeP6Ur8T0VMu8TbjCYhmEueknryBI998-zki_n7uiZUoq4CqjKwrX_rXLRMI5tJIXHp-QDWDRhvsZtbr03XUfY9MI7s622yCVgg4UgeY-TEbKXbcs6WH0_aolXXxvJOERJpiKgOpNToKakCULUqcvVtlKhMCYjrknw9mnSMKsKR4ad3xldHl1q688teaAeX1MF5vxOVaWq2oqFMQted7qC6MELtdEf8w1dMFZKhE4ugsrBQW5P25HT2edgW0JaO9zNiTJibrtZM40hEZEXQUZR347gjtdojqxK78u5s2ihjpHEbzU_LtdsU9dn_jcGKQiSIbJ0A1vNJ-Dyhvyx5bl0oj18INlfKaT8'; 
-            const groupId = '192274188681086634';
+            const apiKey = 'YOUR_API_KEY_HERE'; 
+            const groupId = 'YOUR_GROUP_ID_HERE';
 
             const data = {
                 email: email,
@@ -327,7 +408,6 @@
                 groups: [groupId] 
             };
 
-            // 3. Send the data to MailerLite
             try {
                 const response = await fetch('https://connect.mailerlite.com/api/subscribers', {
                     method: 'POST',
@@ -340,11 +420,9 @@
                 });
 
                 if (response.ok) {
-                    // Success! Hide form and show message
                     form.classList.add('hidden');
                     successMsg.classList.remove('hidden');
                 } else {
-                    // Handle MailerLite API errors (e.g., invalid email)
                     console.error('MailerLite Error:', response.statusText);
                     throw new Error('Submission failed');
                 }
