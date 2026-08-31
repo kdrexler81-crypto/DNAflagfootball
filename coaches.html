@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meet the Coaches | DNA Football</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Oswald:wght@500;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        dna: {
+                            navy: '#0b132b',
+                            blue: '#1c7ed6',
+                            magenta: '#d6336c',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Oswald', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .btn-gradient {
+            background: linear-gradient(135deg, #1c7ed6 0%, #d6336c 100%);
+            transition: all 0.3s ease;
+        }
+        
+        .btn-gradient:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px -10px rgba(214, 51, 108, 0.8);
+        }
+
+        .text-gradient {
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-image: linear-gradient(to right, #1c7ed6, #d6336c);
+        }
+    </style>
+</head>
+<body class="bg-slate-950 text-slate-200 antialiased selection:bg-dna-magenta selection:text-white">
+
+    <nav class="fixed w-full z-50 bg-slate-950/90 backdrop-blur-md border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0 flex items-center gap-3">
+                    <a href="index.html" class="flex items-center gap-3">
+                        <img src="DNA Logo.png" alt="DNA Football Logo" class="h-12 w-auto" onerror="this.style.display='none'">
+                        <span class="font-display font-bold text-xl tracking-wide uppercase text-white hover:text-dna-blue transition">DNA Football</span>
+                    </a>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html#about" class="text-sm font-semibold text-slate-300 hover:text-dna-magenta transition">Our Mission</a>
+                    <a href="index.html#coaching" class="text-sm font-semibold text-slate-300 hover:text-dna-blue transition">Club Standards</a>
+                    <a href="coaches.html" class="text-sm font-semibold text-white transition">The Coaches</a>
+                    <a href="index.html#join" class="text-sm font-semibold hover:text-white text-dna-magenta transition">Join the Roster</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <header class="pt-32 pb-16 bg-slate-900 border-b border-white/5 relative overflow-hidden">
+        <!-- Abstract Background Accent -->
+        <div class="absolute top-0 right-0 w-1/2 h-full bg-dna-blue/5 blur-[120px] rounded-full pointer-events-none"></div>
+        <div class="absolute bottom-0 left-0 w-1/3 h-full bg-dna-magenta/5 blur-[100px] rounded-full pointer-events-none"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+            <h1 class="text-5xl md:text-7xl font-display font-bold uppercase text-white mb-4">Meet The <span class="text-dna-blue">Coaches</span></h1>
+            <p class="text-xl text-slate-400 max-w-2xl mx-auto">Decades of championship experience at the youth, high school, and collegiate levels.</p>
+        </div>
+    </header>
+
+    <main class="py-20 relative z-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="space-y-24">
+                
+                <div class="grid lg:grid-cols-[1fr_2fr] gap-12 items-start bg-slate-900/50 p-8 rounded-3xl border border-white/5 shadow-xl">
+                    <div class="sticky top-28">
+                        <div class="rounded-2xl overflow-hidden border-2 border-dna-blue/30 shadow-lg mb-6 bg-slate-800">
+                            <img src="Kerry Drexler Headshot.jpg" alt="Kerry Drexler" class="w-full h-auto object-cover aspect-square">
+                        </div>
+                        <h2 class="text-3xl font-display font-bold uppercase text-white mb-2">Kerry Drexler</h2>
+                        <h3 class="text-dna-magenta font-semibold tracking-wide uppercase text-sm mb-4">Founder & Coach</h3>
+                    </div>
+                    <div class="prose prose-invert prose-slate max-w-none prose-p:leading-relaxed prose-p:mb-6">
+                        <p>Kerry Drexler is a veteran educator and championship-winning coach with over two decades of experience developing elite athletes. A 2001 graduate of The College of New Jersey (TCNJ), where he played four years of collegiate football, Coach Drexler has built a career defined by athletic excellence, mechanical precision, and an unwavering commitment to youth development.</p>
+                        <p>In 2026, Coach Drexler co-founded DNA Flag Football, Northern New Jersey's premier elite girls' flag football organization. Backed by his experience as a physical education teacher, he holds advanced USA Football and Safe Sport certification as well as comprehensive CPR and First Aid training. At DNA Flag Football, he remains highly hands-on, actively coaching athletes while also training the organization's coaching staff to ensure the highest standard of instruction.</p>
+                        <p>Under his leadership, his youth flag football teams have made the playoffs in every single season they have competed. He also brings years of foundational youth coaching experience, with experience in youth track and field and youth tackle football.</p>
+                        <p>At the high school level, Coach Drexler played a pivotal role in building perennial powerhouse athletic programs. Beginning in 2005, he served as an assistant football coach and offensive coordinator at Cranford High School for twenty seasons, with remarkable gridiron success. His teams made 14 consecutive playoff appearances, advanced to eight semi-finals, four State Finals, and captured three State Sectional Championships and were ranked in the NJ.com top 20 four times. In 2025, he continued this success at Roxbury High School, where he currently serves as an assistant football coach, with a 7-4 record and state semi-finals appearance in his first year on staff.</p>
+                        <p>Beyond team accolades, Coach Drexler is an elite developer of talent. During his coaching career, he has developed one current NFL player, five players who earned FBS scholarships, 17 players with FCS scholarships, and over 35 additional athletes who went on to play collegiate football at the Division II and Division III levels.</p>
+                        <p>Coach Drexler is also a decorated track and field throwing coach in New Jersey. Serving as a throws coach at Cranford, David Brearley, and currently Roxbury High School, he has cultivated a long lineage of individual county and state sectional champions in the shot put and discus, while consistently coaching his athletes to county relay championships across multiple programs.</p>
+                        <p>Coach Drexler's proven track record of offensive innovation, systemic program building, and elite player development makes him uniquely qualified to lead DNA Flag Football's athletes to success at the youth, high school, and collegiate levels.</p>
+                    </div>
+                </div>
+
+                <div class="grid lg:grid-cols-[1fr_2fr] gap-12 items-start bg-slate-900/50 p-8 rounded-3xl border border-white/5 shadow-xl">
+                    <div class="sticky top-28">
+                        <div class="rounded-2xl overflow-hidden border-2 border-dna-blue/30 shadow-lg mb-6 bg-slate-800">
+                            <img src="Ryan Roumes Headshot.jpg" alt="Ryan Roumes" class="w-full h-auto object-cover aspect-square">
+                        </div>
+                        <h2 class="text-3xl font-display font-bold uppercase text-white mb-2">Ryan Roumes</h2>
+                        <h3 class="text-dna-magenta font-semibold tracking-wide uppercase text-sm mb-4">Founder & Coach</h3>
+                    </div>
+                    <div class="prose prose-invert prose-slate max-w-none prose-p:leading-relaxed prose-p:mb-6">
+                        <p>Ryan Roumes is a dedicated educator and championship-winning coach with 13 years of experience developing student-athletes in the Roxbury School District. A 2011 graduate of Roxbury High School and a former Division 1 collegiate football player at Marist College from 2011 to 2015, Coach Roumes has built a career defined by athletic excellence, high-level performance training, and an unwavering commitment to youth development.</p>
+                        <p>In 2026, Coach Roumes co-founded DNA Flag Football, Northern New Jersey's premier elite girls' flag football organization. Backed by his versatile classroom experience as a Health and Physical Education, English, and Special Education teacher, he holds USA Football and SafeSport certification, alongside CPR certification and training for over 10 years. His educational impact was notably recognized when he was named the 2021 Lincoln Roosevelt Teacher of the Year after teaching fifth grade for five years.</p>
+                        <p>At the high school level, Coach Roumes has played a pivotal role in leading his alma mater's football program to success. Currently serving as the Head Football Coach at Roxbury High School for five years, he was named the 2025 NJ.com Football Coach of the Year for the Liberty White Division. Under his leadership, the 2023 team secured an undefeated regular season, captured the Liberty White Division Championship, and became a Section Finalist, ultimately making the state playoffs in three out of his first four years at the helm. Previously, during his seven years as an assistant football coach, he helped guide the Gaels to the 2015 NJAC National Division Championship and the 2015 North 1 Group 4 State Championship.</p>
+                        <p>Beyond team accolades, Coach Roumes is an elite developer of talent and athletic conditioning. He is the creator of the Athletic Performance Program at Roxbury High School, serving as a Certified Performance Coach and the Head Strength Coach and Coordinator for Athletics. Throughout his coaching tenures, which includes seven years as an assistant baseball coach, he has developed multiple collegiate athletes across the Division III and Division I levels, as well as one professional baseball player.</p>
+                        <p>Coach Roumes also brings a wealth of multi-sport leadership to the district. In addition to the gridiron and diamond, he spent two years as the Head Girl's Basketball Coach at Roxbury High School, and also earned RHS Assistant Coach of the Year honors in 2018.</p>
+                        <p>Coach Roumes's proven track record of championship success as a player—including a 2013 PFL Conference Championship at Marist and a 2009 NJSIAA State Championship at Roxbury—combined with his systemic program building and performance expertise, makes him uniquely qualified to lead DNA Flag Football's athletes to success at the youth, high school, and collegiate levels.</p>
+                    </div>
+                </div>
+
+                <div class="grid lg:grid-cols-[1fr_2fr] gap-12 items-start bg-slate-900/50 p-8 rounded-3xl border border-white/5 shadow-xl">
+                    <div class="sticky top-28">
+                        <div class="rounded-2xl overflow-hidden border-2 border-dna-blue/30 shadow-lg mb-6 bg-slate-800">
+                            <img src="Dave Biank Headshot.jpg" alt="Dave Biank" class="w-full h-auto object-cover aspect-square">
+                        </div>
+                        <h2 class="text-3xl font-display font-bold uppercase text-white mb-2">Dave Biank</h2>
+                        <h3 class="text-dna-magenta font-semibold tracking-wide uppercase text-sm mb-4">Founder & Coach</h3>
+                    </div>
+                    <div class="prose prose-invert prose-slate max-w-none prose-p:leading-relaxed prose-p:mb-6">
+                        <p>Dave Biank is a dedicated educator and multi-sport coach with a lifelong commitment to athletics, physical education, and athlete development. A 2017 graduate of Roxbury High School, where he grew up playing football, Coach Biank continued his athletic career as a four-year collegiate lacrosse player at SUNY Cortland. He has built a career defined by athletic excellence, physical conditioning, and an unwavering commitment to mentoring student-athletes.</p>
+                        <p>In 2026, Coach Biank co-founded DNA Flag Football, Northern New Jersey's premier elite girls' flag football organization. Backed by his background as a Physical Education and Health Teacher at Roxbury High School, he holds advanced USA Football and SafeSport certifications, alongside comprehensive CPR and First Aid training. At DNA Flag Football, he leverages his background in skill development and athletic training to ensure the highest standard of instruction.</p>
+                        <p>At the high school level, Coach Biank plays a vital role across multiple sport programs. He serves as an Assistant Varsity Football Coach, the Head Lacrosse Coach, and a Winter Throws Coach for Roxbury High School Track & Field. In addition to his sport-specific coaching duties, he serves as an Athletic Performance Coach at Roxbury High School, applying strength and conditioning principles to build complete, resilient competitors.</p>
+                        <p>Beyond tactical and technical instruction, Coach Biank brings a comprehensive approach to athlete growth. Combining his expertise in physical education, football, lacrosse, strength and conditioning, and long-term movement mechanics, he is committed to developing more than just flag football players—striving to cultivate well-rounded athletes, fierce competitors, and confident leaders.</p>
+                        <p>Coach Biank's proven track record of multi-sport leadership, athletic performance expertise, and holistic player development makes him uniquely qualified to guide DNA Flag Football's athletes to success at the youth, high school, and collegiate levels.</p>
+                    </div>
+                </div>
+
+                <div class="grid lg:grid-cols-[1fr_2fr] gap-12 items-start bg-slate-900/50 p-8 rounded-3xl border border-white/5 shadow-xl">
+                    <div class="sticky top-28">
+                        <div class="rounded-2xl overflow-hidden border-2 border-dna-blue/30 shadow-lg mb-6 bg-slate-800">
+                            <img src="Danny Diorio Headshot 2.jpg" alt="Danny Diorio" class="w-full h-auto object-cover aspect-square">
+                        </div>
+                        <h2 class="text-3xl font-display font-bold uppercase text-white mb-2">Danny Diorio</h2>
+                        <h3 class="text-dna-magenta font-semibold tracking-wide uppercase text-sm mb-4">Co-Founder & Coach</h3>
+                    </div>
+                    <div class="prose prose-invert prose-slate max-w-none prose-p:leading-relaxed prose-p:mb-6">
+                        <p>Danny Diorio is a championship-tested coach, former multi-sport standout, and experienced player-development coach with more than two decades of experience developing athletes at the youth, high school, and collegiate levels. A 2003 graduate of Cedar Grove High School, Diorio was a standout football and baseball player who competed on multiple state championship teams before continuing his baseball career at Montclair State University. His coaching career has since spanned youth and travel baseball, high school baseball and football, collegiate summer baseball, and youth player development.</p>
+                        <p>In 2026, Coach Diorio co-founded DNA Flag Football, Northern New Jersey's premier elite girls' flag football organization. Built around a commitment to long-term athlete development, DNA was created to provide girls with a consistent pathway to train, compete, and grow within one organization as they progress through the sport. Drawing from more than 20 years of coaching experience across multiple sports and levels, Diorio brings a development-first approach to DNA focused on fundamentals, athleticism, confidence, preparation, accountability, and preparing athletes for the next level.</p>
+                        <p>As a player at Cedar Grove High School from 1999–2003, Diorio established himself as a two-sport standout. In football, he was part of the 2000 State Championship team and 2001 State Finalist team. On the baseball diamond, he was a member of the 2000 State Championship team, 2002 State Finalist team, and 2003 State Championship team. Individually, he earned All-State and All-County honors in both 2002 and 2003, establishing himself as one of the area's top high school baseball players. He continued his playing career at Montclair State University in 2003, gaining valuable collegiate experience that would later shape his approach to coaching and player development.</p>
+                        <p>Diorio began his coaching career with the LIB Expos, where from 2009–2023 he worked with athletes ranging from 9U through 17U. During his time in youth and travel baseball, he developed players at every stage of the competitive pathway, helping young athletes build the skills and confidence necessary to transition into high school athletics.</p>
+                        <p>From 2009–2015, Diorio returned to his alma mater as an Assistant Varsity Baseball Coach at Cedar Grove High School. During his tenure, the program reached the 2009 State Final, 2014 State Final, and 2014 County Final. In 2017, he served as a Varsity Assistant Coach at Chatham High School, helping the program reach the State Final for the first time in school history.</p>
+                        <p>Since 2021, Diorio has also coached football at the high school level, serving as an Assistant Varsity Football Coach at Roxbury High School. During his tenure, he has coached the offensive line, defensive line, and defensive backs. In 2023, Roxbury finished 11–1, won the Super Football Conference Liberty White Division Championship, and advanced to the State Final. His experience coaching multiple position groups has given him a comprehensive understanding of athletic movement, speed, agility, coordination, communication, decision-making, and the transferable skills that are essential to developing successful flag football athletes.</p>
+                        <p>In 2023, Diorio coached the LIB Expos ACCBL college baseball team, where the team established an ACCBL regular-season record with 93 stolen bases. The accomplishment reflected his emphasis on aggressive, intelligent, and fundamentally sound baserunning while working with athletes competing at the collegiate level.</p>
+                        <p>Also beginning in 2023, Diorio expanded his role in youth athlete development by serving as Director of Youth Operations for Total Arm Care, a position he held through 2025. In that role, he gained additional experience working with young athletes and developing their skills with an emphasis on long-term athletic development and preparation.</p>
+                        <p>Since 2023, Diorio has served as the Head Baseball Coach at Montville Township High School, where he continues to develop athletes, build a strong team culture, and prepare players for the demands of high school and collegiate baseball.</p>
+                        <p>Beyond team accomplishments, Diorio has developed an extensive track record of preparing athletes for the next level. Throughout his coaching career, he has coached more than 30 athletes who have gone on to compete at the NCAA level, including two athletes who ultimately reached Major League Baseball and one who went on to play in the National Football League. His experience developing athletes across multiple sports and levels has provided him with a unique understanding of what it takes to progress from youth athletics to high school, collegiate, and professional competition.</p>
+                        <p>Diorio's coaching philosophy is rooted in the belief that long-term development creates long-term success. His experience as a championship athlete, collegiate player, high school coach, head coach, and youth player-development director allows him to see the complete athletic pathway and understand what athletes need at each stage of their development.</p>
+                        <p>His goal through DNA Flag Football is to bring that experience to the next generation of female athletes—providing them with the coaching, training, competition, and consistent development necessary to maximize their potential both on and off the field.</p>
+                    </div>
+                </div>
+
+                <div class="grid lg:grid-cols-[1fr_2fr] gap-12 items-start bg-slate-900/50 p-8 rounded-3xl border border-white/5 shadow-xl">
+                    <div class="sticky top-28">
+                        <div class="rounded-2xl overflow-hidden border-2 border-dna-blue/30 shadow-lg mb-6 bg-slate-800">
+                            <img src="Justin Spargo Headshot.jpg" alt="Justin Spargo" class="w-full h-auto object-cover aspect-square">
+                        </div>
+                        <h2 class="text-3xl font-display font-bold uppercase text-white mb-2">Justin Spargo</h2>
+                        <h3 class="text-dna-magenta font-semibold tracking-wide uppercase text-sm mb-4">Educator & Coach</h3>
+                    </div>
+                    <div class="prose prose-invert prose-slate max-w-none prose-p:leading-relaxed prose-p:mb-6">
+                        <p>Justin Spargo is a decorated educator and championship-winning coach with over two decades of experience developing student-athletes in the Roxbury School District. A former multi-sport standout for Roxbury High School, Coach Spargo was named one of the Top 100 football players in the state after leading his team to the 1998 Section 2 Group 4 State Championship. His high school playing career also included back-to-back Morris County Tournament Championships in baseball (1997, 1998) and a State Sectional Championship in wrestling (1995). He has translated that competitive success into a distinguished 23-year career defined by athletic excellence, mechanical precision, and an unwavering commitment to youth development.</p>
+                        <p>Serving as a Health and Physical Education Teacher, Coach Spargo was named the 2024 Eisenhower Middle School Teacher of the Year. He holds comprehensive credentials, including USA Football Certification, SafeSport Training and Certification, and over 20 years of continuous CPR training. Demonstrating a strong dedication to inclusive athletic instruction, he is also ABLE certified for Adapted Physical Education through the New York Jets and ABLE. Beyond his high school roles, he brings years of foundational youth coaching experience, including three years coaching in the Roxbury Youth Field Hockey League.</p>
+                        <p>At the high school level, Coach Spargo has played a pivotal role in building perennial powerhouse athletic programs across multiple sports. Serving as an assistant football coach at Roxbury High School for 22 years, he helped guide the Gaels to NJSIAA North 1 Group 4 State Championships in 2009 and 2012, alongside the 2009 NJAC American Division Championship. His impactful contributions on the gridiron earned him recognition as the Roxbury High School Assistant Coach of the Year.</p>
+                        <p>Coach Spargo's multi-sport leadership extends across every athletic season. During his 10-year tenure as an assistant wrestling coach at Roxbury, he helped capture three State Championships (North 2 Group 3 in 2011 and 2014; North 1 Group 4 in 2015) and two NJAC National Division Championships (2009, 2015). On the diamond, his 15 years as an assistant baseball coach produced three Morris County Tournament titles (2011, 2014, 2015) and the 2014 North Jersey Section 1 Group 4 State Championship. Additionally, in his four years as an assistant ice hockey coach, he helped guide the team to the 2025 HAAS Cup Championship.</p>
+                        <p>Coach Spargo's proven track record of athletic achievement, multi-sport program building, and dedicated mentorship makes him uniquely qualified to lead student-athletes to success at every level.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <section class="py-16 bg-dna-navy border-t border-white/10 text-center relative overflow-hidden">
+        <div class="absolute inset-0 bg-[url('Gemini_Generated_Image_we9ub5we9ub5we9u.png')] opacity-20 bg-cover bg-center"></div>
+        <div class="absolute inset-0 bg-slate-950/80"></div>
+        <div class="relative z-10 max-w-3xl mx-auto px-4">
+            <h2 class="text-3xl font-display font-bold uppercase text-white mb-6">Ready to Train with the Best?</h2>
+            <a href="index.html#join" class="inline-block btn-gradient text-white font-bold px-8 py-4 rounded-xl uppercase tracking-widest text-sm shadow-xl">
+                Register for the Combine
+            </a>
+        </div>
+    </section>
+
+    <footer class="py-10 bg-slate-950 border-t border-white/10 text-center">
+        <div class="flex justify-center gap-6 mb-6">
+            <a href="https://instagram.com/DNA_Athletics_Flag" target="_blank" class="text-slate-400 hover:text-dna-magenta transition flex items-center gap-2">
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z" clip-rule="evenodd"/></svg>
+                <span class="text-sm font-semibold tracking-wide">@DNA_Athletics_Flag</span>
+            </a>
+        </div>
+        <p class="text-slate-600 text-xs uppercase tracking-widest">&copy; <span id="year"></span> DNA Football. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
