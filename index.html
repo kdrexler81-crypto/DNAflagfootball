@@ -88,12 +88,33 @@
                     <img src="DNA Logo.png" alt="DNA Football Logo" class="h-12 w-auto" onerror="this.style.display='none'">
                     <span class="font-display font-bold text-xl tracking-wide uppercase text-white">DNA Football</span>
                 </div>
+                
+                <!-- Desktop Menu -->
                 <div class="hidden md:flex space-x-8">
                     <a href="#about" class="text-sm font-semibold text-slate-300 hover:text-dna-magenta transition">Our Mission</a>
                     <a href="#coaching" class="text-sm font-semibold text-slate-300 hover:text-dna-blue transition">Club Standards</a>
                     <a href="coaches.html" class="text-sm font-semibold text-slate-300 hover:text-white transition">The Coaches</a>
                     <a href="#join" class="text-sm font-semibold hover:text-white text-dna-magenta transition">Join the Roster</a>
                 </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-slate-300 hover:text-white focus:outline-none p-2">
+                        <svg class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="md:hidden hidden bg-slate-950/95 backdrop-blur-xl border-b border-white/10 absolute top-20 left-0 w-full shadow-2xl">
+            <div class="px-4 pt-4 pb-8 space-y-4 flex flex-col text-center">
+                <a href="#about" class="block text-base font-semibold text-slate-300 hover:text-dna-magenta mobile-link">Our Mission</a>
+                <a href="#coaching" class="block text-base font-semibold text-slate-300 hover:text-dna-blue mobile-link">Club Standards</a>
+                <a href="coaches.html" class="block text-base font-semibold text-slate-300 hover:text-white mobile-link">The Coaches</a>
+                <a href="#join" class="block text-base font-semibold text-dna-magenta hover:text-white mobile-link">Join the Roster</a>
             </div>
         </div>
     </nav>
@@ -319,6 +340,22 @@
     <script>
         // Set dynamic year
         document.getElementById('year').textContent = new Date().getFullYear();
+
+        // --- MOBILE MENU LOGIC ---
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close menu when a link is clicked
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
 
         // --- POPUP MODAL LOGIC ---
         document.addEventListener('DOMContentLoaded', () => {
