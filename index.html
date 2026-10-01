@@ -353,16 +353,40 @@
             const closeBtn = document.getElementById('close-modal');
             const ctaBtn = document.getElementById('modal-cta');
 
-            // Check if they've already seen it this session so it doesn't annoy them
-            if (!sessionStorage.getItem('seenCombinePromo')) {
-                // Delay the popup by 1.5 seconds for a smooth entrance
+            // Delay the popup by 1.5 seconds for a smooth entrance
+            // (Removed the sessionStorage check so it appears every time for testing)
+            setTimeout(() => {
+                modal.classList.remove('hidden');
+                // Small delay to allow display block to apply before animating opacity
                 setTimeout(() => {
-                    modal.classList.remove('hidden');
-                    // Small delay to allow display block to apply before animating opacity
-                    setTimeout(() => {
-                        modal.classList.remove('opacity-0');
-                        modalContent.classList.remove('scale-95');
-                        modalContent.classList.add('scale-100');
-                    }, 50);
-                }, 1500);
-            }
+                    modal.classList.remove('opacity-0');
+                    modalContent.classList.remove('scale-95');
+                    modalContent.classList.add('scale-100');
+                }, 50);
+            }, 1500);
+
+            // Function to close modal safely
+            const closeModal = () => {
+                modal.classList.add('opacity-0');
+                modalContent.classList.remove('scale-100');
+                modalContent.classList.add('scale-95');
+                
+                setTimeout(() => {
+                    modal.classList.add('hidden');
+                }, 300); // Wait for transition to finish
+            };
+
+            // Close when clicking the X, or the CTA button
+            closeBtn.addEventListener('click', closeModal);
+            ctaBtn.addEventListener('click', closeModal);
+
+            // Close when clicking outside the modal box (on the dark overlay)
+                       modal.addEventListener('click', (e) => {
+                if(e.target === modal) {
+                    closeModal();
+                }
+            });
+        });
+    </script>
+</body>
+</html>
