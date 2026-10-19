@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clinic Photos | DNA Football</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Oswald:wght@500;700&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        dna: {
+                            navy: '#0b132b',
+                            blue: '#1c7ed6',
+                            magenta: '#d6336c',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Oswald', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        .text-gradient {
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-image: linear-gradient(to right, #1c7ed6, #d6336c);
+        }
+    </style>
+</head>
+
+<body class="bg-slate-950 text-slate-200 antialiased selection:bg-dna-magenta selection:text-white">
+
+    <!-- Navigation (Mirrored from Homepage) -->
+    <nav class="fixed w-full z-50 bg-slate-950/80 backdrop-blur-md border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0 flex items-center gap-3">
+                    <a href="index.html" class="flex items-center gap-3">
+                        <img src="DNA Logo.png" alt="DNA Football Logo" class="h-12 w-auto" onerror="this.style.display='none'">
+                        <span class="font-display font-bold text-xl tracking-wide uppercase text-white hover:text-dna-blue transition">DNA Football</span>
+                    </a>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html" class="text-sm font-semibold text-slate-300 hover:text-white transition">Home</a>
+                    <a href="mission.html" class="text-sm font-semibold text-slate-300 hover:text-dna-magenta transition">Our Mission</a>
+                    <a href="coaches.html" class="text-sm font-semibold text-slate-300 hover:text-white transition">The Coaches</a>
+                    <a href="photos.html" class="text-sm font-semibold text-dna-magenta transition">Photos</a>
+                    <a href="index.html#join" class="text-sm font-semibold hover:text-white text-dna-blue transition">Join the Roster</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-slate-300 hover:text-white focus:outline-none p-2">
+                        <svg class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="md:hidden hidden bg-slate-950/95 backdrop-blur-xl border-b border-white/10 absolute top-20 left-0 w-full shadow-2xl">
+            <div class="px-4 pt-4 pb-8 space-y-4 flex flex-col text-center">
+                <a href="index.html" class="block text-base font-semibold text-slate-300 hover:text-white mobile-link">Home</a>
+                <a href="mission.html" class="block text-base font-semibold text-slate-300 hover:text-dna-magenta mobile-link">Our Mission</a>
+                <a href="coaches.html" class="block text-base font-semibold text-slate-300 hover:text-white mobile-link">The Coaches</a>
+                <a href="photos.html" class="block text-base font-semibold text-dna-magenta mobile-link">Photos</a>
+                <a href="index.html#join" class="block text-base font-semibold text-dna-blue hover:text-white mobile-link">Join the Roster</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <div class="pt-32 pb-12 sm:pt-40 sm:pb-16 relative bg-slate-900 border-b border-white/5">
+        <div class="absolute inset-0 z-0 opacity-20 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGNpcmNsZSBjeD0iMzAiIGN5PSIzMCIgcj0iMSIgZmlsbD0iI2ZmZiIvPjwvc3ZnPg==')]"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+            <h1 class="text-4xl sm:text-6xl font-display font-bold uppercase tracking-tight mb-4 text-white">
+                Clinic <span class="text-dna-blue">Gallery</span>
+            </h1>
+            <p class="text-lg text-slate-400 max-w-2xl mx-auto">
+                Highlights from our most recent development clinics and combines. 
+            </p>
+        </div>
+    </div>
+
+    <!-- Photo Gallery Grid -->
+    <section class="py-16 relative bg-slate-950 min-h-screen">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6">
+                <!-- Photo Item 1 -->
+                <div class="group relative rounded-2xl overflow-hidden aspect-w-4 aspect-h-3 cursor-pointer bg-slate-900 border border-white/5 shadow-lg photo-card">
+                    <!-- Replace the src below with your actual image path, e.g., src="clinic1.jpg" -->
+                    <img src="https://placehold.co/800x600/0b132b/ffffff?text=Clinic+Action+1" alt="Clinic Action Shot 1" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                        <span class="text-white font-semibold text-sm tracking-wide uppercase">Expand Photo</span>
+                    </div>
+                </div>
+
+                <!-- Photo Item 2 -->
+                <div class="group relative rounded-2xl overflow-hidden aspect-w-4 aspect-h-3 cursor-pointer bg-slate-900 border border-white/5 shadow-lg photo-card">
+                    <img src="https://placehold.co/800x600/1c7ed6/ffffff?text=Clinic+Action+2" alt="Clinic Action Shot 2" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                        <span class="text-white font-semibold text-sm tracking-wide uppercase">Expand Photo</span>
+                    </div>
+                </div>
+
+                <!-- Photo Item 3 -->
+                <div class="group relative rounded-2xl overflow-hidden aspect-w-4 aspect-h-3 cursor-pointer bg-slate-900 border border-white/5 shadow-lg photo-card">
+                    <img src="https://placehold.co/800x600/d6336c/ffffff?text=Clinic+Action+3" alt="Clinic Action Shot 3" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                        <span class="text-white font-semibold text-sm tracking-wide uppercase">Expand Photo</span>
+                    </div>
+                </div>
+
+                <!-- Photo Item 4 -->
+                <div class="group relative rounded-2xl overflow-hidden aspect-w-4 aspect-h-3 cursor-pointer bg-slate-900 border border-white/5 shadow-lg photo-card">
+                    <img src="https://placehold.co/800x600/0f172a/ffffff?text=Clinic+Action+4" alt="Clinic Action Shot 4" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                        <span class="text-white font-semibold text-sm tracking-wide uppercase">Expand Photo</span>
+                    </div>
+                </div>
+
+                <!-- Photo Item 5 -->
+                <div class="group relative rounded-2xl overflow-hidden aspect-w-4 aspect-h-3 cursor-pointer bg-slate-900 border border-white/5 shadow-lg photo-card">
+                    <img src="https://placehold.co/800x600/0b132b/ffffff?text=Clinic+Action+5" alt="Clinic Action Shot 5" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                        <span class="text-white font-semibold text-sm tracking-wide uppercase">Expand Photo</span>
+                    </div>
+                </div>
+
+                <!-- Photo Item 6 -->
+                <div class="group relative rounded-2xl overflow-hidden aspect-w-4 aspect-h-3 cursor-pointer bg-slate-900 border border-white/5 shadow-lg photo-card">
+                    <img src="https://placehold.co/800x600/1c7ed6/ffffff?text=Clinic+Action+6" alt="Clinic Action Shot 6" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                        <span class="text-white font-semibold text-sm tracking-wide uppercase">Expand Photo</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-16 text-center">
+                <a href="index.html#join" class="inline-block bg-slate-900 border border-white/20 text-white font-bold px-8 py-4 rounded-full uppercase tracking-widest text-sm hover:bg-white/10 transition shadow-lg">
+                    Join the Waitlist
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Fullscreen Image Lightbox -->
+    <div id="lightbox" class="fixed inset-0 z-[100] bg-black/95 hidden opacity-0 transition-opacity duration-300 flex items-center justify-center p-4">
+        <!-- Close Button -->
+        <button id="lightbox-close" class="absolute top-6 right-6 text-white/70 hover:text-white focus:outline-none bg-black/50 hover:bg-dna-magenta rounded-full p-2 transition-colors z-50">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+        </button>
+        <!-- Full Image -->
+        <img id="lightbox-img" src="" alt="Expanded View" class="max-w-full max-h-[90vh] object-contain rounded-lg shadow-2xl scale-95 transition-transform duration-300">
+    </div>
+
+    <!-- Footer -->
+    <footer class="py-10 bg-slate-950 border-t border-white/10 text-center">
+        <div class="flex justify-center gap-8 mb-6">
+            <a href="https://instagram.com/dna_girlsflagfootball" target="_blank" class="text-slate-400 hover:text-dna-magenta transition flex items-center gap-2">
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z" clip-rule="evenodd"/></svg>
+                <span class="text-sm font-semibold tracking-wide">@dna_girlsflagfootball</span>
+            </a>
+            <a href="https://x.com/DNA_girlsflag" target="_blank" class="text-slate-400 hover:text-white transition flex items-center gap-2">
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                <span class="text-sm font-semibold tracking-wide">@DNA_girlsflag</span>
+            </a>
+        </div>
+        <p class="text-slate-600 text-xs uppercase tracking-widest">&copy; <span id="year"></span> DNA Football. All rights reserved.</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Set dynamic year
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // --- MOBILE MENU LOGIC ---
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close menu when a link is clicked
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // --- LIGHTBOX LOGIC ---
+        const photoCards = document.querySelectorAll('.photo-card img');
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+        const lightboxClose = document.getElementById('lightbox-close');
+
+        // Open Lightbox
+        photoCards.forEach(img => {
+            img.addEventListener('click', () => {
+                lightboxImg.src = img.src; // Set high-res image source
+                lightbox.classList.remove('hidden');
+                
+                // Small delay to allow display block to apply before animating opacity
+                setTimeout(() => {
+                    lightbox.classList.remove('opacity-0');
+                    lightboxImg.classList.remove('scale-95');
+                    lightboxImg.classList.add('scale-100');
+                }, 10);
+            });
+        });
+
+        // Close Lightbox Function
+        const closeLightbox = () => {
+            lightbox.classList.add('opacity-0');
+            lightboxImg.classList.remove('scale-100');
+            lightboxImg.classList.add('scale-95');
+            
+            setTimeout(() => {
+                lightbox.classList.add('hidden');
+                lightboxImg.src = ''; // Clear image
+            }, 300); // Wait for transition to finish
+        };
+
+        // Close on Button Click
+        lightboxClose.addEventListener('click', closeLightbox);
+
+        // Close on Background Click
+        lightbox.addEventListener('click', (e) => {
+            if (e.target === lightbox) {
+                closeLightbox();
+            }
+        });
+
+        // Close on Escape Key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && !lightbox.classList.contains('hidden')) {
+                closeLightbox();
+            }
+        });
+    </script>
+</body>
+</html>
