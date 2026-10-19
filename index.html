@@ -6,6 +6,7 @@
     <title>DNA Football | Elite Girls' Flag Football in Northern NJ</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Oswald:wght@500;700&display=swap" rel="stylesheet">
+    
     <script>
         tailwind.config = {
             theme: {
@@ -25,6 +26,7 @@
             }
         }
     </script>
+    
     <style>
         .btn-gradient {
             background: linear-gradient(135deg, #1c7ed6 0%, #d6336c 100%);
@@ -42,42 +44,10 @@
             -webkit-text-fill-color: transparent;
             background-image: linear-gradient(to right, #1c7ed6, #d6336c);
         }
-        
-        /* Modal Animation */
-        .modal-fade-in {
-            animation: modalFadeIn 0.4s ease-out forwards;
-        }
-        @keyframes modalFadeIn {
-            from { opacity: 0; transform: scale(0.95) translateY(20px); }
-            to { opacity: 1; transform: scale(1) translateY(0); }
-        }
     </style>
 </head>
+
 <body class="bg-slate-950 text-slate-200 antialiased selection:bg-dna-magenta selection:text-white">
-
-    <!-- PROMO POPUP MODAL -->
-    <div id="promo-modal" class="fixed inset-0 z-[100] flex items-center justify-center bg-black/80 backdrop-blur-sm hidden opacity-0 transition-opacity duration-300">
-        <div class="relative max-w-lg w-full bg-slate-900 rounded-3xl shadow-2xl border border-white/20 p-2 mx-4 transform scale-95 transition-transform duration-300" id="modal-content">
-            <!-- Close Button -->
-            <button id="close-modal" class="absolute top-4 right-4 z-10 w-8 h-8 flex items-center justify-center bg-black/50 hover:bg-dna-magenta text-white rounded-full transition-colors">
-                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
-            </button>
-            
-            <!-- Flier Image Placeholder -->
-            <div class="relative rounded-2xl overflow-hidden bg-slate-800 flex items-center justify-center">
-                <img src="Flier.jpeg" alt="DNA Football Combine Clinic Flier" class="w-full h-auto object-cover max-h-[70vh]">
-            </div>
-
-            <!-- Modal Action Area -->
-            <div class="p-6 text-center">
-                <h3 class="text-2xl font-display font-bold text-white mb-2 uppercase">Inaugural Combine & Clinic</h3>
-                <p class="text-slate-400 text-sm mb-6">Spots are extremely limited. Secure your place on the roster today.</p>
-                <a href="#join" id="modal-cta" class="inline-block w-full btn-gradient text-white font-bold px-6 py-4 rounded-xl uppercase tracking-widest text-sm shadow-lg">
-                    Secure Your Spot
-                </a>
-            </div>
-        </div>
-    </div>
 
     <!-- Navigation -->
     <nav class="fixed w-full z-50 bg-slate-950/80 backdrop-blur-md border-b border-white/10">
@@ -94,6 +64,7 @@
                     <a href="mission.html" class="text-sm font-semibold text-slate-300 hover:text-dna-magenta transition">Our Mission</a>
                     <a href="#coaching" class="text-sm font-semibold text-slate-300 hover:text-dna-blue transition">Club Standards</a>
                     <a href="coaches.html" class="text-sm font-semibold text-slate-300 hover:text-white transition">The Coaches</a>
+                    <a href="photos.html" class="text-sm font-semibold text-slate-300 hover:text-dna-magenta transition">Photos</a>
                     <a href="#join" class="text-sm font-semibold hover:text-white text-dna-magenta transition">Join the Roster</a>
                 </div>
 
@@ -114,6 +85,7 @@
                 <a href="mission.html" class="block text-base font-semibold text-slate-300 hover:text-dna-magenta mobile-link">Our Mission</a>
                 <a href="#coaching" class="block text-base font-semibold text-slate-300 hover:text-dna-blue mobile-link">Club Standards</a>
                 <a href="coaches.html" class="block text-base font-semibold text-slate-300 hover:text-white mobile-link">The Coaches</a>
+                <a href="photos.html" class="block text-base font-semibold text-slate-300 hover:text-dna-magenta mobile-link">Photos</a>
                 <a href="#join" class="block text-base font-semibold text-dna-magenta hover:text-white mobile-link">Join the Roster</a>
             </div>
         </div>
@@ -125,7 +97,7 @@
         <!-- Background Image Container -->
         <div class="absolute inset-0 z-0">
             <!-- Ensure your generated image is uploaded to github as exactly this name -->
-            <img src="Gemini_Generated_Image_we9ub5we9ub5we9u.png" alt="Action background" class="w-full h-full object-cover opacity-60">
+            <img src="Gemini_Generated_Image_cuoa2scuoa2scuoa.jpg" alt="Action background" class="w-full h-full object-cover opacity-60">
             <!-- Dark gradient overlay to make text readable -->
             <div class="absolute inset-0 bg-gradient-to-b from-slate-950/50 via-slate-950/70 to-slate-950"></div>
         </div>
@@ -152,8 +124,8 @@
             </p>
             
             <div class="flex flex-col sm:flex-row justify-center gap-4">
-                <a href="#join" class="btn-gradient text-white font-bold px-8 py-4 rounded-full uppercase tracking-widest text-sm shadow-xl text-center border border-transparent">
-                    Register for Combine
+                <a href="#mailing-list" class="btn-gradient text-white font-bold px-8 py-4 rounded-full uppercase tracking-widest text-sm shadow-xl text-center border border-transparent">
+                    Join the Mailing List
                 </a>
                 <a href="mission.html" class="bg-slate-950/50 backdrop-blur-md border border-white/20 text-white font-bold px-8 py-4 rounded-full uppercase tracking-widest text-sm hover:bg-white/10 transition text-center">
                     Discover Our Mission
@@ -261,24 +233,11 @@
 
                     <!-- Form -->
                     <div class="bg-slate-900 p-8 rounded-2xl border border-white/5 shadow-inner">
-                        <h3 class="text-2xl font-bold text-white mb-2">Combine Clinic Registration</h3>
-                        <p class="text-slate-400 text-sm mb-8">Secure your spot for our inaugural combine and clinic. Space is strictly limited.</p>
+                        <h3 class="text-2xl font-bold text-white mb-2">Join the Waitlist</h3>
+                        <p class="text-slate-400 text-sm mb-8">Registration is opening soon. Sign up for our mailing list to get more info and be the first to know when we go live.</p>
 
-                        <!-- Jotform Embed -->
-                        <iframe
-                            id="JotFormIFrame-261971178556065"
-                            title="DNA Football Waitlist"
-                            onload="window.parent.scrollTo(0,0)"
-                            allowtransparency="true"
-                            allow="geolocation; microphone; camera; fullscreen"
-                            src="https://form.jotform.com/261971178556065"
-                            frameborder="0"
-                            style="min-width:100%;max-width:100%;height:539px;border:none;"
-                            scrolling="no"
-                        >
-                        </iframe>
-                        <script src="https://cdn.jotfor.ms/s/umd/latest/for-form-embed-handler.js"></script>
-                        <script>window.jotformEmbedHandler("iframe[id='JotFormIFrame-261971178556065']", "https://form.jotform.com/")</script>
+                        <!-- MailerLite Embedded Form Code -->
+                        <div class="ml-embedded" data-form="2rQzvh"></div>
                     </div>
                 </div>
             </div>
@@ -345,48 +304,8 @@
                 mobileMenu.classList.add('hidden');
             });
         });
-
-        // --- POPUP MODAL LOGIC ---
-        document.addEventListener('DOMContentLoaded', () => {
-            const modal = document.getElementById('promo-modal');
-            const modalContent = document.getElementById('modal-content');
-            const closeBtn = document.getElementById('close-modal');
-            const ctaBtn = document.getElementById('modal-cta');
-
-            // Delay the popup by 1.5 seconds for a smooth entrance
-            // (Removed the sessionStorage check so it appears every time for testing)
-            setTimeout(() => {
-                modal.classList.remove('hidden');
-                // Small delay to allow display block to apply before animating opacity
-                setTimeout(() => {
-                    modal.classList.remove('opacity-0');
-                    modalContent.classList.remove('scale-95');
-                    modalContent.classList.add('scale-100');
-                }, 50);
-            }, 1500);
-
-            // Function to close modal safely
-            const closeModal = () => {
-                modal.classList.add('opacity-0');
-                modalContent.classList.remove('scale-100');
-                modalContent.classList.add('scale-95');
-                
-                setTimeout(() => {
-                    modal.classList.add('hidden');
-                }, 300); // Wait for transition to finish
-            };
-
-            // Close when clicking the X, or the CTA button
-            closeBtn.addEventListener('click', closeModal);
-            ctaBtn.addEventListener('click', closeModal);
-
-            // Close when clicking outside the modal box (on the dark overlay)
-                       modal.addEventListener('click', (e) => {
-                if(e.target === modal) {
-                    closeModal();
-                }
-            });
-        });
+        
+        // Popup Modal Logic has been completely removed
     </script>
 </body>
 </html>
