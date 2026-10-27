@@ -98,7 +98,7 @@
         <div class="absolute inset-0 z-0">
             <!-- Looping Background Video (Replace src with your actual video file) -->
             <video autoplay loop muted playsinline class="w-full h-full object-cover opacity-60">
-                <source src="hero-video.mp4" type="video/mp4">
+                <source src="Backgroundvideo (2).mp4" type="video/mp4">
             </video>
             <!-- Dark gradient overlay to make text readable -->
             <div class="absolute inset-0 bg-gradient-to-b from-slate-950/50 via-slate-950/70 to-slate-950"></div>
@@ -126,8 +126,8 @@
             </p>
             
             <div class="flex flex-col sm:flex-row justify-center gap-4">
-                <a href="#mailing-list" class="btn-gradient text-white font-bold px-8 py-4 rounded-full uppercase tracking-widest text-sm shadow-xl text-center border border-transparent">
-                    Join the Mailing List
+                <a href="#register" class="btn-gradient text-white font-bold px-8 py-4 rounded-full uppercase tracking-widest text-sm shadow-xl text-center border border-transparent">
+                    Register for the Combine
                 </a>
                 <a href="mission.html" class="bg-slate-950/50 backdrop-blur-md border border-white/20 text-white font-bold px-8 py-4 rounded-full uppercase tracking-widest text-sm hover:bg-white/10 transition text-center">
                     Discover Our Mission
@@ -234,39 +234,41 @@
                     </div>
 
                     <!-- Form -->
-                    <div class="bg-slate-900 p-8 rounded-2xl border border-white/5 shadow-inner">
-                        <h3 class="text-2xl font-bold text-white mb-2">Join the Waitlist</h3>
-                        <p class="text-slate-400 text-sm mb-8">Registration is opening soon. Sign up for our mailing list to get more info and be the first to know when we go live.</p>
-
-                        <!-- MailerLite Embedded Form Code -->
-                        <div class="ml-embedded" data-form="2rQzvh"></div>
+                    <div class="bg-slate-900 p-8 rounded-2xl border border-white/5 shadow-inner flex flex-col justify-center items-center text-center h-full">
+                        <h3 class="text-2xl font-bold text-white mb-4">Ready to Elevate Your Game?</h3>
+                        <p class="text-slate-400 text-sm mb-8">Secure your spot for our inaugural combine and clinic today. Space is strictly limited.</p>
+                        <a href="#register" class="btn-gradient text-white font-bold px-8 py-4 rounded-full uppercase tracking-widest text-sm shadow-xl border border-transparent">
+                            Register Now
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Mailing List Subscription Section -->
-    <section id="mailing-list" class="py-24 relative bg-dna-navy border-t border-white/5 text-center overflow-hidden">
+    <!-- Registration Section -->
+    <section id="register" class="py-24 relative bg-dna-navy border-t border-white/5 text-center overflow-hidden">
         <!-- Background Accents -->
         <div class="absolute top-0 right-0 w-1/3 h-full bg-dna-blue/10 blur-[120px] rounded-full pointer-events-none"></div>
         <div class="absolute bottom-0 left-0 w-1/4 h-full bg-dna-magenta/10 blur-[100px] rounded-full pointer-events-none"></div>
 
-        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <h2 class="text-3xl sm:text-5xl font-display font-bold uppercase mb-4 text-white">Stay in the <span class="text-dna-blue">Loop</span></h2>
-            <p class="text-slate-400 text-lg mb-10">Join our mailing list to receive the latest news, combine updates, and program announcements directly in your inbox.</p>
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <h2 class="text-3xl sm:text-5xl font-display font-bold uppercase mb-4 text-white">Register for the <span class="text-dna-blue">Combine</span></h2>
+            <p class="text-slate-400 text-lg mb-10">Sign up below to secure your place on the roster.</p>
             
-            <div class="bg-slate-900/50 p-6 md:p-8 rounded-3xl border border-white/10 shadow-2xl inline-block w-full max-w-xl mx-auto">
-                <!-- MailerLite Universal Tracking Snippet -->
-                <script>
-                    (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[]).push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
-                    n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
-                    (window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
-                    ml('account', '2493675'); 
-                </script>
-
-                <!-- MailerLite Embedded Form Code -->
-                <div class="ml-embedded" data-form="2rQzvh"></div>
+            <div class="bg-slate-900/50 p-6 md:p-8 rounded-3xl border border-white/10 shadow-2xl inline-block w-full mx-auto">
+                <!-- Jotform Embed -->
+                <iframe
+                    id="JotFormIFrame-262914891648168"
+                    title="DNA Football Registration"
+                    allowtransparency="true"
+                    allow="geolocation; microphone; camera; fullscreen"
+                    src="https://form.jotform.com/262914891648168"
+                    frameborder="0"
+                    style="min-width:100%;max-width:100%;height:700px;border:none;"
+                    scrolling="yes"
+                >
+                </iframe>
             </div>
         </div>
     </section>
