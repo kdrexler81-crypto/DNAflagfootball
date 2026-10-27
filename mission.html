@@ -6,6 +6,7 @@
     <title>Our Mission | DNA Football</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Oswald:wght@500;700&display=swap" rel="stylesheet">
+    
     <script>
         tailwind.config = {
             theme: {
@@ -25,41 +26,31 @@
             }
         }
     </script>
+    
     <style>
         .btn-gradient {
             background: linear-gradient(135deg, #1c7ed6 0%, #d6336c 100%);
             transition: all 0.3s ease;
         }
+        
         .btn-gradient:hover {
             transform: translateY(-2px);
             box-shadow: 0 10px 20px -10px rgba(214, 51, 108, 0.8);
         }
+
         .text-gradient {
             background-clip: text;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-image: linear-gradient(to right, #1c7ed6, #d6336c);
         }
-        .pathway-step:not(:last-child)::after {
-            content: '';
-            position: absolute;
-            right: -1.5rem;
-            top: 50%;
-            transform: translateY(-50%);
-            border-top: 8px solid transparent;
-            border-bottom: 8px solid transparent;
-            border-left: 12px solid #1c7ed6;
-            opacity: 0.5;
-            z-index: 10;
-        }
-        @media (max-width: 1024px) {
-            .pathway-step::after { display: none; }
-        }
     </style>
 </head>
+
 <body class="bg-slate-950 text-slate-200 antialiased selection:bg-dna-magenta selection:text-white">
 
-    <nav class="fixed w-full z-50 bg-slate-950/90 backdrop-blur-md border-b border-white/10">
+    <!-- Navigation (Mirrored from Homepage) -->
+    <nav class="fixed w-full z-50 bg-slate-950/80 backdrop-blur-md border-b border-white/10">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-20">
                 <div class="flex-shrink-0 flex items-center gap-3">
@@ -69,13 +60,18 @@
                     </a>
                 </div>
                 
+                <!-- Desktop Menu -->
                 <div class="hidden md:flex space-x-8">
-                    <a href="mission.html" class="text-sm font-semibold text-white transition">Our Mission</a>
+                    <a href="index.html" class="text-sm font-semibold text-slate-300 hover:text-white transition">Home</a>
+                    <a href="mission.html" class="text-sm font-semibold text-dna-magenta transition">Our Mission</a>
                     <a href="index.html#coaching" class="text-sm font-semibold text-slate-300 hover:text-dna-blue transition">Club Standards</a>
                     <a href="coaches.html" class="text-sm font-semibold text-slate-300 hover:text-white transition">The Coaches</a>
-                    <a href="index.html#join" class="text-sm font-semibold hover:text-white text-dna-magenta transition">Join the Roster</a>
+                    <a href="photos.html" class="text-sm font-semibold text-slate-300 hover:text-dna-magenta transition">Photos</a>
+                    <a href="https://www.dnaflagratings.com/" target="_blank" class="text-sm font-semibold text-slate-300 hover:text-white transition">DNA Ratings</a>
+                    <a href="index.html#join" class="text-sm font-semibold hover:text-white text-dna-blue transition">Join the Roster</a>
                 </div>
 
+                <!-- Mobile Menu Button -->
                 <div class="md:hidden flex items-center">
                     <button id="mobile-menu-btn" class="text-slate-300 hover:text-white focus:outline-none p-2">
                         <svg class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -86,177 +82,188 @@
             </div>
         </div>
 
+        <!-- Mobile Menu Dropdown -->
         <div id="mobile-menu" class="md:hidden hidden bg-slate-950/95 backdrop-blur-xl border-b border-white/10 absolute top-20 left-0 w-full shadow-2xl">
             <div class="px-4 pt-4 pb-8 space-y-4 flex flex-col text-center">
-                <a href="mission.html" class="block text-base font-semibold text-white mobile-link">Our Mission</a>
+                <a href="index.html" class="block text-base font-semibold text-slate-300 hover:text-white mobile-link">Home</a>
+                <a href="mission.html" class="block text-base font-semibold text-dna-magenta mobile-link">Our Mission</a>
                 <a href="index.html#coaching" class="block text-base font-semibold text-slate-300 hover:text-dna-blue mobile-link">Club Standards</a>
                 <a href="coaches.html" class="block text-base font-semibold text-slate-300 hover:text-white mobile-link">The Coaches</a>
-                <a href="index.html#join" class="block text-base font-semibold text-dna-magenta hover:text-white mobile-link">Join the Roster</a>
+                <a href="photos.html" class="block text-base font-semibold text-slate-300 hover:text-dna-magenta mobile-link">Photos</a>
+                <a href="https://www.dnaflagratings.com/" target="_blank" class="block text-base font-semibold text-slate-300 hover:text-white mobile-link">DNA Ratings</a>
+                <a href="index.html#join" class="block text-base font-semibold text-dna-blue hover:text-white mobile-link">Join the Roster</a>
             </div>
         </div>
     </nav>
 
-    <header class="pt-32 pb-20 bg-slate-900 border-b border-white/5 relative overflow-hidden">
-        <div class="absolute top-0 right-0 w-1/2 h-full bg-dna-blue/5 blur-[120px] rounded-full pointer-events-none"></div>
-        <div class="absolute bottom-0 left-0 w-1/3 h-full bg-dna-magenta/5 blur-[100px] rounded-full pointer-events-none"></div>
-        
-        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
-            <h3 class="text-dna-blue font-semibold tracking-widest uppercase text-sm mb-4">DNA Girls Flag Football</h3>
-            <h1 class="text-5xl md:text-7xl font-display font-bold uppercase text-white mb-6">Developing Today's Youth.<br><span class="text-dna-magenta">Preparing Tomorrow's Athletes.</span></h1>
-            <p class="text-2xl text-slate-300 max-w-3xl mx-auto font-light italic">"It's In <span class="text-gradient font-bold not-italic">Your Blood.</span>"</p>
+    <!-- Page Header -->
+    <div class="pt-32 pb-12 sm:pt-40 sm:pb-16 relative bg-slate-900 border-b border-white/5">
+        <div class="absolute inset-0 z-0 opacity-20 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGNpcmNsZSBjeD0iMzAiIGN5PSIzMCIgcj0iMSIgZmlsbD0iI2ZmZiIvPjwvc3ZnPg==')]"></div>
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+            <h1 class="text-4xl sm:text-6xl font-display font-bold uppercase tracking-tight mb-4 text-white">
+                Our <span class="text-dna-blue">Mission</span>
+            </h1>
+            <p class="text-xl sm:text-2xl text-slate-300 font-light leading-relaxed">
+                Elevating Girls' Flag Football through elite development, professional coaching, and national exposure.
+            </p>
         </div>
-    </header>
+    </div>
 
-    <section class="py-20 relative z-10 bg-slate-950">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl font-display font-bold uppercase text-white mb-4">Who We Are</h2>
-                <div class="w-24 h-1 bg-gradient-to-r from-dna-blue to-dna-magenta mx-auto rounded-full"></div>
-            </div>
-            <div class="space-y-6 text-slate-300 leading-relaxed text-lg lg:text-xl font-light">
-                <p><strong class="text-white font-semibold">DNA Girls Flag Football</strong> was created with one goal in mind: to develop the youth and provide girls with a pathway to reach their fullest potential.</p>
-                <p>We are starting with the younger generations of athletes and building something that grows with them. Our vision is not simply to create teams for one season or one age group. We are building a long-term player development pathway that begins with our youngest athletes and develops with them as they grow, mature, and advance through the sport.</p>
-                <p>As girls flag football continues to grow at an unprecedented rate and becomes an increasingly recognized pathway to high school and collegiate athletics, we believe girls deserve more than the traditional model of "sign up, practice, and play for your town."</p>
-                <div class="p-8 my-10 bg-slate-900 border-l-4 border-dna-magenta rounded-r-2xl shadow-xl">
-                    <p class="text-2xl text-white font-display uppercase tracking-wide leading-snug">Instead of jumping between different programs, coaches, and teams as they get older, DNA athletes will have access to a structured development system designed to grow with them.</p>
-                </div>
-                <p>A young athlete entering DNA today may begin by learning the fundamentals, building confidence, and developing a love for the game. As she progresses, she will have the opportunity to advance her skills, learn more advanced concepts, compete at higher levels, and eventually become part of our elite teams and exposure opportunities.</p>
-                <p class="text-center text-dna-blue font-bold text-2xl mt-8">The goal is to develop our own athletes from the ground up.<br><span class="text-white font-medium text-xl">Our youngest players today are the high school and collegiate athletes of tomorrow.</span></p>
-            </div>
-        </div>
-    </section>
-
-    <section class="py-24 bg-slate-900 border-y border-white/5 relative overflow-hidden">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-5xl font-display font-bold uppercase text-white mb-4">The DNA Development Pathway</h2>
-                <p class="text-slate-400 text-lg max-w-2xl mx-auto">Designed to create a continuous pathway from youth development to elite competition and exposure.</p>
-            </div>
-
-            <!-- Flowchart blocks -->
-            <div class="flex flex-col lg:flex-row justify-center items-center gap-4 lg:gap-8 mb-16">
-                <div class="pathway-step relative w-full lg:w-auto text-center bg-slate-950 border border-dna-blue/30 px-6 py-4 rounded-xl shadow-[0_0_15px_rgba(28,126,214,0.15)]">
-                    <span class="block text-dna-blue font-bold uppercase tracking-widest">Develop</span>
-                </div>
-                <div class="pathway-step relative w-full lg:w-auto text-center bg-slate-950 border border-dna-blue/30 px-6 py-4 rounded-xl shadow-[0_0_15px_rgba(28,126,214,0.15)]">
-                    <span class="block text-dna-blue font-bold uppercase tracking-widest">Train</span>
-                </div>
-                <div class="pathway-step relative w-full lg:w-auto text-center bg-slate-950 border border-dna-magenta/30 px-6 py-4 rounded-xl shadow-[0_0_15px_rgba(214,51,108,0.15)]">
-                    <span class="block text-dna-magenta font-bold uppercase tracking-widest">Compete</span>
-                </div>
-                <div class="pathway-step relative w-full lg:w-auto text-center bg-slate-950 border border-dna-magenta/30 px-6 py-4 rounded-xl shadow-[0_0_15px_rgba(214,51,108,0.15)]">
-                    <span class="block text-dna-magenta font-bold uppercase tracking-widest">Advance</span>
-                </div>
-                <div class="pathway-step relative w-full lg:w-auto text-center bg-slate-950 border border-white/20 px-6 py-4 rounded-xl shadow-[0_0_15px_rgba(255,255,255,0.1)]">
-                    <span class="block text-white font-bold uppercase tracking-widest">Get Seen</span>
-                </div>
-                <div class="w-full lg:w-auto text-center btn-gradient px-8 py-4 rounded-xl shadow-lg">
-                    <span class="block text-white font-bold uppercase tracking-widest">Achieve</span>
-                </div>
-            </div>
-
-            <div class="max-w-4xl mx-auto text-center text-slate-300 space-y-6 text-lg">
-                <p>Athletes will have the opportunity to remain within the DNA system as they grow and develop, building on the skills and knowledge they have already acquired rather than starting over every time they move to a new team or program.</p>
-                <p>Our younger athletes will have access to the same DNA philosophy, resources, technology, testing, and development mindset that our older athletes receive. As they mature, their opportunities will grow with them. The ultimate goal is to have athletes who have been developed within the DNA system from a young age through the highest levels of competition they are capable of reaching.</p>
-            </div>
-        </div>
-    </section>
-
-    <section class="py-24 bg-slate-950 relative z-10">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid lg:grid-cols-2 gap-16 items-center">
-                
-                <!-- What Makes DNA Different -->
+    <!-- The Mission (Concise Version) -->
+    <section class="py-20 relative bg-slate-950">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
                 <div>
-                    <h2 class="text-3xl sm:text-4xl font-display font-bold uppercase mb-6 text-white">What Makes DNA <span class="text-dna-blue">Different</span></h2>
-                    <p class="text-slate-400 mb-8 text-lg">We are committed to offering opportunities and resources that no other program in our area currently provides. DNA will bring together:</p>
+                    <h2 class="text-3xl font-display font-bold uppercase mb-6 text-white border-l-4 border-dna-magenta pl-4">The DNA Difference</h2>
+                    <p class="text-slate-400 text-lg leading-relaxed mb-6">
+                        We don't just run plays; we build athletes. Our goal is to provide a premier, long-term pathway for girls to reach their fullest potential on and off the field.
+                    </p>
                     <ul class="space-y-4">
-                        <li class="flex items-center text-slate-300"><span class="w-2 h-2 bg-dna-magenta rounded-full mr-4"></span> Elite, experienced coaching</li>
-                        <li class="flex items-center text-slate-300"><span class="w-2 h-2 bg-dna-magenta rounded-full mr-4"></span> Advanced training and player-development methods</li>
-                        <li class="flex items-center text-slate-300"><span class="w-2 h-2 bg-dna-magenta rounded-full mr-4"></span> Elite-level teams and competition</li>
-                        <li class="flex items-center text-slate-300"><span class="w-2 h-2 bg-dna-magenta rounded-full mr-4"></span> Year-round development and consistent training</li>
-                        <li class="flex items-center text-slate-300"><span class="w-2 h-2 bg-dna-magenta rounded-full mr-4"></span> Combine testing and measurable athletic development</li>
-                        <li class="flex items-center text-slate-300"><span class="w-2 h-2 bg-dna-magenta rounded-full mr-4"></span> Game and combine film opportunities</li>
-                        <li class="flex items-center text-slate-300"><span class="w-2 h-2 bg-dna-blue rounded-full mr-4"></span> A direct pathway toward high school and collegiate exposure</li>
-                        <li class="flex items-center text-slate-300"><span class="w-2 h-2 bg-dna-blue rounded-full mr-4"></span> Individual digital athlete profiles through the DNA App</li>
+                        <li class="flex items-start gap-3">
+                            <svg class="w-6 h-6 text-dna-blue flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            <span class="text-slate-300"><strong>Elite Pipeline:</strong> Escaping the limits of recreational leagues to compete at a travel and national level.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <svg class="w-6 h-6 text-dna-blue flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            <span class="text-slate-300"><strong>High-Volume Fundamentals:</strong> Mastering the mechanics of the game from day one.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <svg class="w-6 h-6 text-dna-blue flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            <span class="text-slate-300"><strong>Next-Level Exposure:</strong> Dual-sanctioned by USA Football and NFL FLAG.</span>
+                        </li>
                     </ul>
-                    <p class="mt-8 text-slate-400 italic">Our younger athletes will begin building their DNA profile and athletic history from the start. As they grow, their profile grows with them.</p>
                 </div>
+                
+                <!-- Mission Image Placeholder -->
+                <div class="relative rounded-2xl overflow-hidden shadow-2xl border border-white/10 bg-slate-900 aspect-square md:aspect-auto md:h-[400px]">
+                    <img src="Mission_Action.jpg" alt="Girls Flag Football Action" class="absolute inset-0 w-full h-full object-cover opacity-80" onerror="this.style.display='none'">
+                    <!-- Fallback if no image -->
+                    <div class="absolute inset-0 flex flex-col items-center justify-center text-slate-600 border-2 border-dashed border-slate-700 m-4 rounded-xl -z-10">
+                        <svg class="w-12 h-12 mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                        <span>Add Mission_Action.jpg</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-                <!-- Digital Profile Mockup -->
-                <div class="relative">
-                    <div class="absolute inset-0 bg-dna-blue/10 blur-3xl rounded-full"></div>
-                    <div class="relative bg-slate-900 border border-white/10 p-8 rounded-3xl shadow-2xl">
-                        <div class="flex justify-between items-center mb-6 border-b border-white/10 pb-6">
-                            <h3 class="text-2xl font-display font-bold text-white uppercase">Your DNA Profile</h3>
-                            <span class="text-xs font-bold tracking-widest uppercase bg-dna-magenta/20 text-dna-magenta px-3 py-1 rounded-full border border-dna-magenta/30">In App</span>
-                        </div>
-                        <p class="text-sm text-slate-400 mb-6">Today, coaches and recruiters want more than a name on a roster. They want to see who you are, what you can do, how you measure, and how you perform.</p>
+    <!-- Your DNA Profile Section -->
+    <section class="py-24 relative bg-slate-900 border-t border-white/5">
+        <div class="absolute top-0 right-0 w-1/3 h-full bg-dna-magenta/5 blur-[120px] rounded-full pointer-events-none"></div>
+        <div class="absolute bottom-0 left-0 w-1/4 h-full bg-dna-blue/5 blur-[100px] rounded-full pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl sm:text-5xl font-display font-bold uppercase mb-4 text-white">Your <span class="text-dna-magenta">DNA Profile</span></h2>
+                <p class="text-slate-400 text-lg">
+                    Data-driven development. Attend our clinics to earn your official DNA Score, track your athletic measurables, and compare your stats on the national leaderboard.
+                </p>
+            </div>
+
+            <div class="bg-slate-950 rounded-3xl p-6 sm:p-12 border border-white/10 shadow-2xl">
+                <div class="grid lg:grid-cols-2 gap-12 items-center">
+                    
+                    <!-- Text Info -->
+                    <div>
+                        <h3 class="text-2xl font-bold text-white mb-6">Verified Measurables</h3>
+                        <p class="text-slate-400 leading-relaxed mb-6">
+                            When you join the DNA Football roster, your athletic progress is tracked via our custom <strong>DNA Flag Ratings</strong> app. We measure what matters: speed, agility, and explosion.
+                        </p>
                         
-                        <!-- Mock Stats Grid -->
-                        <div class="grid grid-cols-2 gap-4 mb-6">
-                            <div class="bg-slate-950 p-4 rounded-xl border border-white/5 flex flex-col justify-center items-center text-center">
-                                <span class="text-xs text-slate-500 uppercase tracking-widest mb-1">40-Yard Dash</span>
-                                <span class="text-2xl font-display font-bold text-white tracking-wide">_._<span class="text-sm text-slate-400 ml-1">sec</span></span>
+                        <div class="space-y-4 mb-8">
+                            <div class="bg-slate-900 p-4 rounded-xl border border-white/5 flex justify-between items-center">
+                                <span class="text-slate-300 font-semibold">40-Yard Dash</span>
+                                <span class="text-dna-blue font-bold">Speed</span>
                             </div>
-                            <div class="bg-slate-950 p-4 rounded-xl border border-white/5 flex flex-col justify-center items-center text-center">
-                                <span class="text-xs text-slate-500 uppercase tracking-widest mb-1">Vertical Jump</span>
-                                <span class="text-2xl font-display font-bold text-white tracking-wide">__.<span class="text-sm text-slate-400 ml-1">in</span></span>
+                            <div class="bg-slate-900 p-4 rounded-xl border border-white/5 flex justify-between items-center">
+                                <span class="text-slate-300 font-semibold">5-10-5 Shuttle</span>
+                                <span class="text-dna-magenta font-bold">Agility</span>
                             </div>
-                            <div class="bg-slate-950 p-4 rounded-xl border border-white/5 flex flex-col justify-center items-center text-center">
-                                <span class="text-xs text-slate-500 uppercase tracking-widest mb-1">Broad Jump</span>
-                                <span class="text-2xl font-display font-bold text-white tracking-wide">_'_"<span class="text-sm text-slate-400 ml-1">ft</span></span>
-                            </div>
-                            <div class="bg-slate-950 p-4 rounded-xl border border-white/5 flex flex-col justify-center items-center text-center">
-                                <span class="text-xs text-slate-500 uppercase tracking-widest mb-1">5-10-5 Shuttle</span>
-                                <span class="text-2xl font-display font-bold text-white tracking-wide">_._<span class="text-sm text-slate-400 ml-1">sec</span></span>
+                            <div class="bg-slate-900 p-4 rounded-xl border border-white/5 flex justify-between items-center">
+                                <span class="text-slate-300 font-semibold">Broad & Vertical Jump</span>
+                                <span class="text-emerald-400 font-bold">Explosion</span>
                             </div>
                         </div>
 
-                        <div class="bg-dna-blue/10 border border-dna-blue/30 rounded-xl p-4 text-center">
-                            <p class="text-dna-blue font-bold text-sm uppercase tracking-wide">One click can put an athlete on a coach's radar.</p>
+                        <a href="https://www.dnaflagratings.com/" target="_blank" class="btn-gradient inline-block text-white font-bold px-8 py-3 rounded-full uppercase tracking-widest text-sm shadow-xl">
+                            View National Leaderboard
+                        </a>
+                    </div>
+
+                    <!-- Sample Profile UI Cards -->
+                    <div class="relative">
+                        <!-- Background Accents -->
+                        <div class="absolute -inset-4 bg-gradient-to-r from-dna-blue/20 to-dna-magenta/20 blur-xl rounded-full opacity-50"></div>
+                        
+                        <!-- Image Container -->
+                        <div class="relative grid grid-cols-2 gap-4">
+                            <!-- Card 1: Main Profile Mockup -->
+                            <div class="rounded-2xl overflow-hidden shadow-2xl border border-white/10 bg-slate-900 aspect-[3/4] relative transform hover:-translate-y-2 transition duration-300 flex flex-col">
+                                <!-- Mock Photo Area -->
+                                <div class="relative h-1/2 bg-gradient-to-br from-slate-700 to-slate-900 flex items-center justify-center border-b border-white/5">
+                                    <div class="absolute top-3 left-0 right-0 flex justify-center">
+                                        <span class="bg-white text-slate-900 text-[9px] font-bold px-3 py-1 rounded-full uppercase tracking-widest shadow-lg">Verified Profile</span>
+                                    </div>
+                                    <svg class="w-20 h-20 text-slate-500 opacity-30 mt-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+                                </div>
+                                <!-- Mock Info Area -->
+                                <div class="p-4 flex flex-col items-center text-center flex-grow justify-between">
+                                    <div>
+                                        <h4 class="font-display font-bold text-xl text-white uppercase tracking-wider mb-1">Sarah Davis</h4>
+                                        <p class="text-dna-blue text-[10px] font-bold uppercase tracking-widest">WR &bull; Class of 2033 &bull; 12U</p>
+                                    </div>
+                                    <div class="bg-slate-950 border border-white/10 rounded-xl p-3 w-full mt-3 shadow-inner">
+                                        <p class="text-slate-400 text-[9px] uppercase tracking-widest mb-1">DNA Score</p>
+                                        <p class="text-4xl font-display font-bold text-dna-magenta">5.8</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Card 2: Metrics Mockup -->
+                            <div class="rounded-2xl overflow-hidden shadow-2xl border border-white/10 bg-slate-900 aspect-[3/4] relative transform translate-y-8 hover:-translate-y-2 transition duration-300 flex flex-col p-4">
+                                <h4 class="font-display font-bold text-xs text-white uppercase tracking-widest text-center mb-4 border-b border-white/10 pb-3">Verified Metrics</h4>
+                                
+                                <div class="grid grid-cols-2 gap-2 flex-grow">
+                                    <!-- Metric -->
+                                    <div class="bg-slate-950 rounded-lg p-2 flex flex-col justify-center items-center text-center border border-white/5">
+                                        <span class="text-slate-400 text-[8px] uppercase tracking-widest mb-1">40-Yard</span>
+                                        <span class="text-white font-bold text-sm">6.97s</span>
+                                    </div>
+                                    <!-- Metric -->
+                                    <div class="bg-slate-950 rounded-lg p-2 flex flex-col justify-center items-center text-center border border-white/5">
+                                        <span class="text-slate-400 text-[8px] uppercase tracking-widest mb-1">5-10-5</span>
+                                        <span class="text-white font-bold text-sm">5.59s</span>
+                                    </div>
+                                    <!-- Metric -->
+                                    <div class="bg-slate-950 rounded-lg p-2 flex flex-col justify-center items-center text-center border border-white/5">
+                                        <span class="text-slate-400 text-[8px] uppercase tracking-widest mb-1">Max Speed</span>
+                                        <span class="text-white font-bold text-sm">12.6 mph</span>
+                                    </div>
+                                    <!-- Metric -->
+                                    <div class="bg-slate-950 rounded-lg p-2 flex flex-col justify-center items-center text-center border border-white/5">
+                                        <span class="text-slate-400 text-[8px] uppercase tracking-widest mb-1">Broad Jump</span>
+                                        <span class="text-white font-bold text-sm">5'9"</span>
+                                    </div>
+                                    <!-- Metric -->
+                                    <div class="bg-slate-950 rounded-lg p-2 flex flex-col justify-center items-center text-center border border-white/5">
+                                        <span class="text-slate-400 text-[8px] uppercase tracking-widest mb-1">Vertical</span>
+                                        <span class="text-white font-bold text-sm">13"</span>
+                                    </div>
+                                    <!-- Metric -->
+                                    <div class="bg-slate-950 rounded-lg p-2 flex flex-col justify-center items-center text-center border border-white/5">
+                                        <span class="text-slate-400 text-[8px] uppercase tracking-widest mb-1">Catching</span>
+                                        <span class="text-white font-bold text-sm">83%</span>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
     </section>
 
-    <section class="py-24 bg-slate-900 border-t border-white/5">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid md:grid-cols-2 gap-12 lg:gap-24">
-                
-                <div>
-                    <h2 class="text-4xl font-display font-bold uppercase text-white mb-6 border-l-4 border-dna-magenta pl-4">Our Mission</h2>
-                    <p class="text-lg text-slate-300 leading-relaxed mb-6 font-medium">To develop young female athletes through elite coaching, advanced training, consistent competition, and meaningful opportunities for growth and exposure while helping each athlete reach her fullest potential on and off the field.</p>
-                    <p class="text-slate-400 leading-relaxed mb-6">We aren't simply trying to build better football players. We are developing confident, disciplined, competitive young women who understand what it means to work toward a goal, overcome challenges, be part of a team, and pursue excellence.</p>
-                    <p class="text-slate-400 leading-relaxed">Our mission begins with our youngest athletes. We want them to develop the right way from the beginning, establish strong fundamentals, learn how to compete, and grow within a culture that challenges them to become better every day.</p>
-                </div>
-
-                <div>
-                    <h2 class="text-4xl font-display font-bold uppercase text-white mb-6 border-l-4 border-dna-blue pl-4">Our Vision</h2>
-                    <p class="text-lg text-slate-300 leading-relaxed mb-6 font-medium">To become the premier girls flag football development program in New Jersey and create a true pathway from youth flag football to high school and collegiate opportunities.</p>
-                    <p class="text-slate-400 leading-relaxed mb-6">We envision a program where girls have one place to call home—a place where they can train, compete, develop, build relationships, track their progress, and pursue their goals alongside the best coaches and athletes in the area.</p>
-                    <p class="text-slate-400 leading-relaxed mb-6">A place where an 8-year-old athlete can enter DNA, develop year after year, advance through the program, compete on elite teams, build her athletic profile, gain exposure, and ultimately pursue opportunities at the high school and collegiate levels.</p>
-                    <p class="text-slate-400 leading-relaxed">As the sport continues to grow and collegiate recruitment opportunities rapidly expand, DNA intends to be ahead of the curve—not catching up to it.</p>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <section class="py-24 bg-slate-950 border-t border-white/5 text-center">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl md:text-5xl font-display font-bold uppercase text-white mb-6 leading-tight">This isn't your average<br>youth flag football program.</h2>
-            <p class="text-xl text-dna-magenta font-semibold tracking-wide uppercase mb-10">We are building a development system. We are building a community. We are building a pathway.</p>
-            <p class="text-lg text-slate-400 mb-10">And most importantly, we are building a place where girls can discover just how far they can go. Whatever your highest goal may be—whether that's becoming the best athlete you can be, making your high school team, competing at an elite level, playing in college, or simply discovering what you're capable of—DNA is here to help you chase it.</p>
-            <a href="index.html#join" class="inline-block btn-gradient text-white font-bold px-10 py-5 rounded-xl uppercase tracking-widest text-sm shadow-xl">
-                Start Your Journey
-            </a>
-        </div>
-    </section>
-
+    <!-- Footer -->
     <footer class="py-10 bg-slate-950 border-t border-white/10 text-center">
         <div class="flex justify-center gap-8 mb-6">
             <a href="https://instagram.com/dna_girlsflagfootball" target="_blank" class="text-slate-400 hover:text-dna-magenta transition flex items-center gap-2">
@@ -271,13 +278,24 @@
         <p class="text-slate-600 text-xs uppercase tracking-widest">&copy; <span id="year"></span> DNA Football. All rights reserved.</p>
     </footer>
 
+    <!-- Scripts -->
     <script>
         document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Mobile Menu Logic
         const mobileMenuBtn = document.getElementById('mobile-menu-btn');
         const mobileMenu = document.getElementById('mobile-menu');
         const mobileLinks = document.querySelectorAll('.mobile-link');
-        mobileMenuBtn.addEventListener('click', () => { mobileMenu.classList.toggle('hidden'); });
-        mobileLinks.forEach(link => { link.addEventListener('click', () => { mobileMenu.classList.add('hidden'); }); });
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
     </script>
 </body>
 </html>
