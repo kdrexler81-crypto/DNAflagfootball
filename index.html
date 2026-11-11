@@ -332,7 +332,43 @@
             });
         });
         
-        // Popup Modal Logic has been completely removed
+        // --- POPUP MODAL LOGIC ---
+        document.addEventListener('DOMContentLoaded', () => {
+            const modal = document.getElementById('promo-modal');
+            const modalContent = document.getElementById('modal-content');
+            const closeBtn = document.getElementById('close-modal');
+            const ctaBtn = document.getElementById('modal-cta');
+
+            // Delay the popup by 1.5 seconds for a smooth entrance
+            setTimeout(() => {
+                modal.classList.remove('hidden');
+                setTimeout(() => {
+                    modal.classList.remove('opacity-0');
+                    modalContent.classList.remove('scale-95');
+                    modalContent.classList.add('scale-100');
+                }, 50);
+            }, 1500);
+
+            // Function to close modal safely
+            const closeModal = () => {
+                modal.classList.add('opacity-0');
+                modalContent.classList.remove('scale-100');
+                modalContent.classList.add('scale-95');
+                
+                setTimeout(() => {
+                    modal.classList.add('hidden');
+                }, 300);
+            };
+
+            // Close when clicking the X, the CTA button, or the dark background overlay
+            closeBtn.addEventListener('click', closeModal);
+            ctaBtn.addEventListener('click', closeModal);
+            modal.addEventListener('click', (e) => {
+                if (e.target === modal) {
+                    closeModal();
+                }
+            });
+        });
     </script>
 </body>
 </html>
