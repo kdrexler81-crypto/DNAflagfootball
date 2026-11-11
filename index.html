@@ -48,7 +48,29 @@
 </head>
 
 <body class="bg-slate-950 text-slate-200 antialiased selection:bg-dna-magenta selection:text-white">
+<!-- PROMO POPUP MODAL -->
+    <div id="promo-modal" class="fixed inset-0 z-[100] flex items-center justify-center bg-black/80 backdrop-blur-sm hidden opacity-0 transition-opacity duration-300">
+        <div class="relative max-w-lg w-full bg-slate-900 rounded-3xl shadow-2xl border border-white/20 p-2 mx-4 transform scale-95 transition-transform duration-300" id="modal-content">
+            <!-- Close Button -->
+            <button id="close-modal" class="absolute top-4 right-4 z-10 w-8 h-8 flex items-center justify-center bg-black/50 hover:bg-dna-magenta text-white rounded-full transition-colors">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+            </button>
+            
+            <!-- Flier Image -->
+            <div class="relative rounded-2xl overflow-hidden bg-slate-800 flex items-center justify-center">
+                <img src="Clinic2 copy.jpg" alt="DNA Football Clinic Flier" class="w-full h-auto object-cover max-h-[70vh]">
+            </div>
 
+            <!-- Modal Action Area -->
+            <div class="p-6 text-center">
+                <h3 class="text-2xl font-display font-bold text-white mb-2 uppercase">Upcoming DNA Clinic</h3>
+                <p class="text-slate-400 text-sm mb-6">Spots are extremely limited. Secure your place on the roster today.</p>
+                <a href="https://form.jotform.com/262914891648168" target="_blank" id="modal-cta" class="inline-block w-full btn-gradient text-white font-bold px-6 py-4 rounded-xl uppercase tracking-widest text-sm shadow-lg">
+                    Register For Clinic
+                </a>
+            </div>
+        </div>
+    </div>
     <!-- Navigation -->
     <nav class="fixed w-full z-50 bg-slate-950/80 backdrop-blur-md border-b border-white/10">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
