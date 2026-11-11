@@ -233,9 +233,9 @@
     </section>
 
     <!-- Fullscreen Image Lightbox -->
-    <div id="lightbox" class="fixed inset-0 z-[100] bg-black/95 hidden opacity-0 transition-opacity duration-300 flex items-center justify-center p-4">
+    <div id="lightbox" style="display: none;" class="fixed inset-0 z-[100] bg-black/95 hidden opacity-0 transition-opacity duration-300 items-center justify-center p-4">
         <!-- Close Button -->
-        <button id="lightbox-close" class="absolute top-6 right-6 text-white/70 hover:text-white focus:outline-none bg-black/50 hover:bg-dna-magenta rounded-full p-2 transition-colors z-50">
+        <button id="lightbox-close" type="button" class="absolute top-6 right-6 text-white/70 hover:text-white focus:outline-none bg-black/50 hover:bg-dna-magenta rounded-full p-2 transition-colors z-50 cursor-pointer">
             <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
         </button>
         <!-- Full Image -->
@@ -259,71 +259,85 @@
 
     <!-- Scripts -->
     <script>
-        // Set dynamic year
-        document.getElementById('year').textContent = new Date().getFullYear();
+        // Set dynamic year safely
+        const yearEl = document.getElementById('year');
+        if (yearEl) {
+            yearEl.textContent = new Date().getFullYear();
+        }
 
         // --- MOBILE MENU LOGIC ---
         const mobileMenuBtn = document.getElementById('mobile-menu-btn');
         const mobileMenu = document.getElementById('mobile-menu');
         const mobileLinks = document.querySelectorAll('.mobile-link');
 
-        mobileMenuBtn.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
-
-        // Close menu when a link is clicked
-        mobileLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                mobileMenu.classList.add('hidden');
+        if (mobileMenuBtn && mobileMenu) {
+            mobileMenuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
             });
-        });
 
-         // --- LIGHTBOX LOGIC ---
-        const photoCards = document.querySelectorAll('.photo-card');
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                });
+            });
+        }
+
+        // --- LIGHTBOX LOGIC ---
         const lightbox = document.getElementById('lightbox');
         const lightboxImg = document.getElementById('lightbox-img');
         const lightboxClose = document.getElementById('lightbox-close');
-        
-        // Open Lightbox
-        photoCards.forEach(img => {
-            img.addEventListener('click', () => {
-                lightboxImg.src = img.src; // Set high-res image source
-                lightbox.classList.remove('hidden');
-                
-                // Small delay to allow display block to apply before animating opacity
-                setTimeout(() => {
-                    lightbox.classList.remove('opacity-0');
-                    lightboxImg.classList.remove('scale-95');
-                    lightboxImg.classList.add('scale-100');
-                }, 10);
-            });
-        });
 
-        // Close Lightbox Function
+        const openLightbox = (imgSrc) => {
+            if (!lightbox || !lightboxImg || !imgSrc) return;
+            lightboxImg.src = imgSrc;
+            lightbox.classList.remove('hidden');
+            lightbox.style.display = 'flex';
+            
+            setTimeout(() => {
+                lightbox.classList.remove('opacity-0');
+                lightboxImg.classList.remove('scale-95');
+                lightboxImg.classList.add('scale-100');
+            }, 10);
+        };
+
         const closeLightbox = () => {
+            if (!lightbox || !lightboxImg) return;
             lightbox.classList.add('opacity-0');
             lightboxImg.classList.remove('scale-100');
             lightboxImg.classList.add('scale-95');
             
             setTimeout(() => {
                 lightbox.classList.add('hidden');
-                lightboxImg.src = ''; // Clear image
-            }, 300); // Wait for transition to finish
+                lightbox.style.display = 'none';
+                lightboxImg.src = '';
+            }, 300);
         };
 
-        // Close on Button Click
-        lightboxClose.addEventListener('click', closeLightbox);
-
-        // Close on Background Click
-        lightbox.addEventListener('click', (e) => {
-            if (e.target === lightbox) {
-                closeLightbox();
+        // Listen for clicks on any photo card in the gallery
+        document.addEventListener('click', (e) => {
+            const card = e.target.closest('.photo-card, .grid .group');
+            if (card) {
+                const img = card.querySelector('img');
+                if (img && img.src) {
+                    openLightbox(img.src);
+                }
             }
         });
 
-        // Close on Escape Key
+        if (lightboxClose) {
+            lightboxClose.addEventListener('click', closeLightbox);
+        }
+
+        if (lightbox) {
+            lightbox.addEventListener('click', (e) => {
+                if (e.target === lightbox) {
+                    closeLightbox();
+                }
+            });
+        }
+
         document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape' && !lightbox.classList.contains('hidden')) {
+            if (e.key === 'Escape' && lightbox && !lightbox.classList.contains('hidden')) {
                 closeLightbox();
             }
         });
