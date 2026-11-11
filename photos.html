@@ -278,12 +278,12 @@
             });
         });
 
-        // --- LIGHTBOX LOGIC ---
-        const photoCards = document.querySelectorAll('.photo-card img');
+         // --- LIGHTBOX LOGIC ---
+        const photoCards = document.querySelectorAll('.photo-card');
         const lightbox = document.getElementById('lightbox');
         const lightboxImg = document.getElementById('lightbox-img');
         const lightboxClose = document.getElementById('lightbox-close');
-
+        
         // Open Lightbox
         photoCards.forEach(img => {
             img.addEventListener('click', () => {
